@@ -1,0 +1,45 @@
+.blockChainSection3Contain{
+    transition: .3s;
+    position: relative;
+    width: 100vw;
+    height: 4000px;
+    .section3Inner{
+        position: sticky;
+        // overflow-x: scroll;
+        // transform: translateX(-800px);
+        display: flex;
+        align-items: center;
+        top: 0;
+        width: 90vw;
+        height: 100vw;
+        margin: auto;
+        .mainText{
+            height: 100vh;
+            font-size: 60px;
+            font-weight: 700;
+            color: #fff;
+            width: 500px;
+        }
+        .itemBox{
+            display: flex;
+            align-items: center;
+            .item{
+                color: #fff;
+                height: 100vh;
+                margin-left: 10%;
+                .icon{
+                    width: 250px;
+                    height: 250px;
+                    border: 2px solid #fff;
+                    border-radius: 20px;
+                    background-size: cover;
+                }
+                .title{
+                    padding-top: 10px;
+                    font-size: 30px;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}

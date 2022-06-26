@@ -1,0 +1,17 @@
+@mixin backImage(){
+    width: 100vw;
+    height: 100vh;
+    background-attachment: fixed;
+    background-size: cover;    
+}
+.section2Contain{
+    position: relative;
+    .backImage:nth-child(1){
+        @include backImage();
+        background-image: url('https://www.enterpriseblockchain.io/assets/img/showcase/img-showcase02-pc.jpg');
+    }
+    .backImage:nth-child(2){
+        @include backImage();
+        background-image: url('https://www.enterpriseblockchain.io/assets/img/showcase/img-showcase03-pc.jpg');
+    }
+}

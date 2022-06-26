@@ -1,0 +1,34 @@
+.contain{
+    position: relative;
+    width: 100vw;
+    height: 2800px;
+    .inner{
+        overflow-x: hidden;
+        background-image: url('https://www.enterpriseblockchain.io/assets/img/showcase/img-showcase01-pc.jpg');
+        background-size: cover;
+        position: sticky;
+        top: 0px;
+        .section{
+            .textBox{
+                position: absolute;
+                z-index: 10;
+                text-align: center;
+                width: 100vw;
+                top: 30%;
+                font-size: 100px;
+                font-weight: 700;
+                line-height: 1.5;
+                color: #fff;
+                .mainText:nth-child(1){
+                    // transform: translateX(300px);
+                }
+            }
+        }
+        .backImage{
+            background-color: #000;
+            opacity: 0;
+            width: 100vw;
+            height: 100vh;
+        }
+    }
+}
