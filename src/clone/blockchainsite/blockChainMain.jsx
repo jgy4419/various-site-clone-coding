@@ -7,7 +7,7 @@ import Section3 from './BlockChainSection/BlockChainSection3';
 export default function BlockChainMain(){
     return(
         // 참고 사이트 : https://www.enterpriseblockchain.io/
-        <Route exact path="/blockchain">
+        <Route>
             {/* <Header/> */}
             <Section1/>
             <Section2/>

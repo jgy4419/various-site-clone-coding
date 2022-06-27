@@ -28,8 +28,6 @@ export default function BlockChainSection3(){
             let currentScrollValue = document.documentElement.scrollTop;
             let rightScroll = currentScrollValue / 5;
             let inner = document.querySelector('.section3Inner');
-            // console.log('currentScrollValue' + currentScrollValue);
-            // console.log(rightScroll);
             inner.style.transform = `translateX(-${rightScroll - 1000}px)`;
             if(currentScrollValue > screenHeight / 2){
                 blockChainSection3Contain.style.backgroundColor = 'black';
