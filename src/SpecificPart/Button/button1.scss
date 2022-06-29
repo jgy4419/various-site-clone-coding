@@ -1,0 +1,27 @@
+.btn1{
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: #333;
+    transition: .3s;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+}
+.btn1:active{
+    background-color: rgb(60, 184, 29);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    // content: "V";
+    span{
+        // opacity: 0;
+        // transition: .3s;
+        display: none;
+    }
+}
+.btn1:active:before{
+    // transition: 1s;
+    content: "V";
+}

@@ -1,0 +1,27 @@
+.slide1Contain{
+    position: relative;
+    width: 1000px;
+    margin: auto;
+    overflow-x: hidden;
+    .boxs{
+        margin: auto;
+        display: flex;    
+        animation-duration: 3s;
+        width: calc(250px * 8); // width 값은 박스의 개수 * 박스크기
+        animation: carousel 3s linear infinite;
+        .box{
+            color: #fff;
+            width: 250px;
+            box-sizing: border-box;
+            height: 100px;
+            border: 1px solid #fff;
+            border-radius: 20px;
+        }
+    }
+}
+
+@keyframes carousel {
+	0% { transform: translateX(0); }
+    // 박스가 4개 지나면 초기화 시켜주기 (자연스럽게 이어짐)
+	100% { transform: translateX(calc(-250px * 4))} // -슬라이드는 박스의 크기 * (박스개수 / 2)
+}

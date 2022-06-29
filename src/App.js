@@ -1,10 +1,10 @@
 import './App.scss';
 import React, { useEffect, useState, useContext, createContext, lazy, Suspense, memo } from 'react';
 import { Link, Route, Switch, useHistory, useParams} from 'react-router-dom';
-import {connect, useSelector, useDispatch} from 'react-redux';
-
 import BlockChainMain from './clone/blockchainsite/blockChainMain';
 import Card from './SpecificPart/Card/card';
+import Button from './SpecificPart/Button/button';
+import Slide from '../src/SpecificPart/Slide/slide';
 
 
 function App(props) {
@@ -22,6 +22,14 @@ function App(props) {
       {/* UI 특정 부분(Card) */}
       <Route exact path="/card">
         <Card/>
+      </Route>
+      {/* UI 특정 부분(Button) */}
+      <Route exact path="/button">
+        <Button/>
+      </Route>
+      {/* UI 특정 부분(Slide) */}
+      <Route exact path="/slide">
+        <Slide/>
       </Route>
     </div>
   );
