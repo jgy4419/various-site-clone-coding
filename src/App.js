@@ -1,11 +1,16 @@
 import './App.scss';
 import React, { useEffect, useState, useContext, createContext, lazy, Suspense, memo } from 'react';
 import { Link, Route, Switch, useHistory, useParams} from 'react-router-dom';
+
+// cloneCoding
 import BlockChainMain from './clone/blockchainsite/blockChainMain';
 import ChungJungWonMain from '../src/clone/blockchainsite/ChungJungWonMain';
+
+// SpecificPart
 import Card from './SpecificPart/Card/card';
 import Button from './SpecificPart/Button/button';
 import Slide from '../src/SpecificPart/Slide/slide';
+import Text from './SpecificPart/Text/Text';
 
 
 function App(props) {
@@ -35,6 +40,10 @@ function App(props) {
       {/* UI 특정 부분(Slide) */}
       <Route exact path="/slide">
         <Slide/>
+      </Route>
+      {/* UI 특정 부분(Text) */}
+      <Route exact path="/text">
+        <Text/>
       </Route>
     </div>
   );

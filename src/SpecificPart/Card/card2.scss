@@ -1,0 +1,25 @@
+.card2Contain{
+    position: relative;
+    margin: auto;
+    width: 70vw;
+    height: 700px;
+    .cards{
+        list-style: none;
+        border-radius: 20px;
+        width: 80vw;
+        height: 300px;
+        display: flex;
+        .card{
+            transition: .5s;
+            flex: 1;
+            width: 500px;
+            height: 500px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .card:hover{
+            width: 800px;
+            flex: 4;
+        }
+    }
+}

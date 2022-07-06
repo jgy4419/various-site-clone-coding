@@ -10,45 +10,36 @@ export default function Section1(){
             'https://www.chungjungone.com/wp-content/uploads/2022/03/chungjungone-bg4-min.png'
         ],
         mainText: [
-            '정원아, 오늘도 부탁해',
-            '만족을 요리하다',
-            '안주야를 만나는 순간, 모든 것이 즐겂다',
-            '맛있는 발효숙성'
+            '정원아,<br/> 오늘도 부탁해',
+            '만족을 <br/> 요리하다',
+            '안주야를 만나는 순간, <br/>모든 것이 즐겂다',
+            '맛있는<br/> 발효숙성'
         ],
     }
 
     useEffect(() => {
-        scrollEvent();
+        scrollEvent(20, 3);
     }, []);
 
-    function scrollEvent(){
+    function scrollEvent(scrollValue, index){
         let screenHeight = document.documentElement.scrollHeight;
         let backImage = document.querySelectorAll('.bar');
-        document.addEventListener('scroll', () => {
+        // e는 20부터..
+        // for(let i = e; i > 12; i--){
+        document.addEventListener('scroll', async () => {
             let currentScrollValue = document.documentElement.scrollTop;
-            // for(let i = 20; i > 12; i-=2){
-                for(let j = 0; j < 4; j++){
-                    let i = 20;
-                    // if(currentScrollValue > screenHeight / [i]){
-                    if(currentScrollValue > screenHeight / [i]){
-                        backImage[j].style.backgroundSize = '100%';
-                    }else{
-                        backImage[j].style.backgroundSize = '130%';
-                    }
-                    i--;
+            if(currentScrollValue > screenHeight / 25 && currentScrollValue < screenHeight / 14){
+                backImage[0].style.backgroundSize = '100%';
+                backImage[1].style.backgroundSize = '100%';
+            }
+            else if(currentScrollValue > screenHeight / 14){
+                backImage[2].style.backgroundSize = '100%';
+                backImage[3].style.backgroundSize = '100%';
+            }else{
+                for(let i = 0; i < backImage.length; i++){
+                    backImage[i].style.backgroundSize = '130%';
                 }
-            // }
-
-            // if(currentScrollValue > screenHeight / 20){
-            //     backImage[0].style.backgroundSize = '100%';
-            // }else if(currentScrollValue < screenHeight / 20 && currentScrollValue > screenHeight / 19){
-            //     backImage[1].style.backgroundSize = '100%';
-            // }
-            // else{
-            //     for(let i = 0; i < backImage.length; i++){
-            //         backImage[i].style.backgroundSize = '130%';
-            //     }
-            // }
+            }
         })
     }
 
@@ -58,7 +49,7 @@ export default function Section1(){
             barArray.push(
                 <div className="bar" style={{
                     backgroundImage: `url(${barItem.backColor[i]})`
-                }}>ㅋㅋ</div>
+                }}><p className="itemText" dangerouslySetInnerHTML={{__html: barItem.mainText[i]}}/></div>
             )
         }
         return barArray;
