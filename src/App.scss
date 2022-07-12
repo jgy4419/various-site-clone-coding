@@ -1,47 +1,47 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-// mainPage
-.container{
-    width: 100vw;
-    height: 90vh;
-    background-image: url("https://assets.nflxext.com/ffe/siteui/vlv3/1691099b-ff71-4321-bd54-1bba46b0886b/d2edabfd-1e64-41f4-a2b4-9796a7d765eb/KR-ko-20220228-popsignuptwoweeks-perspective_alpha_website_medium.jpg");
-    background-size: cover;
-    box-shadow:  inset 10px 70px 100px #000;
-}
+// *{
+//     margin: 0;
+//     padding: 0;
+// }
+// // mainPage
+// .container{
+//     width: 100vw;
+//     height: 90vh;
+//     background-image: url("https://assets.nflxext.com/ffe/siteui/vlv3/1691099b-ff71-4321-bd54-1bba46b0886b/d2edabfd-1e64-41f4-a2b4-9796a7d765eb/KR-ko-20220228-popsignuptwoweeks-perspective_alpha_website_medium.jpg");
+//     background-size: cover;
+//     box-shadow:  inset 10px 70px 100px #000;
+// }
 
-// header
-.header{
-    padding-top: 20px;
-    width: 100vw;
-    height: 10vh;
-    .inner{
-        width: 80vw;
-        margin: auto;
-        display: flex;
-        justify-content: space-between;
-        .logo{
-            font-size: 50px;
-            font-weight: 700;
-            color: red;
-        }
-        .language{
-            height: 40px;
-            color: #fff;
-            background-color: #000;
-        }
-        .loginBtn{
-            width: 80px;
-            height: 40px;
-            font-size: 18px;
-            background-color: red;
-            color: #fff;
-            border-radius: 5px;
-        }
-    }
-}
+// // header
+// .header{
+//     padding-top: 20px;
+//     width: 100vw;
+//     height: 10vh;
+//     .inner{
+//         width: 80vw;
+//         margin: auto;
+//         display: flex;
+//         justify-content: space-between;
+//         .logo{
+//             font-size: 50px;
+//             font-weight: 700;
+//             color: red;
+//         }
+//         .language{
+//             height: 40px;
+//             color: #fff;
+//             background-color: #000;
+//         }
+//         .loginBtn{
+//             width: 80px;
+//             height: 40px;
+//             font-size: 18px;
+//             background-color: red;
+//             color: #fff;
+//             border-radius: 5px;
+//         }
+//     }
+// }
 
-.container2{
-    height: 100vh;
-}
+// .container2{
+//     height: 100vh;
+// }
