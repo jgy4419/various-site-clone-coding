@@ -1,18 +1,18 @@
-import {atom, selector} from 'recoil';
+// import {atom, selector} from 'recoil';
 
-export const textState = atom({
-    text: 'textState',
-    default: ''
-});
+// export const textState = atom({
+//     text: 'textState',
+//     default: ''
+// });
 
-export const changeText = selector({
-    key: 'changeText',
-    get: ({get}) => {
-        let text = get(textState);
+// export const changeText = selector({
+//     key: 'changeText',
+//     get: ({get}) => {
+//         let text = get(textState);
 
-        return text.length;
-    }
-})
+//         return text.length;
+//     }
+// })
 
 
 // import { atom, selector } from 'recoil';

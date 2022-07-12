@@ -13,7 +13,7 @@ import {
 } from 'recoil';
 
 
-function CharacterCounter() {
+export default function CharacterCounter() {
     return (
       <div>
         <TextInput />

@@ -11,6 +11,7 @@ import Card from './SpecificPart/Card/card';
 import Button from './SpecificPart/Button/button';
 import Slide from '../src/SpecificPart/Slide/slide';
 import Text from './SpecificPart/Text/Text';
+import Menu from './SpecificPart/MenuBar/Menu';
 
 // Todo
 import TodoList from './RecoilTodo/TodoList';
@@ -57,6 +58,10 @@ function App(props) {
         {/* UI 특정 부분(Text) */}
         <Route exact path="/text">
           <Text/>
+        </Route>
+        {/* UI 특정 부분(Menu) */}
+        <Route exact path="/menu">
+          <Menu/>
         </Route>
         {/* ToDoList */}
         {/* <Route exact path="/todoList">
