@@ -1,5 +1,5 @@
 import './App.scss';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useReducer, useMemo, useRef } from 'react';
 import { Link, Route, Switch, useHistory, useParams} from 'react-router-dom';
 
 // cloneCoding
@@ -27,13 +27,24 @@ import {
 } from 'recoil';
 
 function App(props) {
+  const inputRef = useRef();
+  
+  useEffect(() => {
+    console.log(inputRef);
+    inputRef.current.focus();
+  }, [])
 
+  const loginAlert = () => {
+    alert(`환영합니다. ${inputRef.current.value}`);
+    inputRef.current.focus();
+  }
   return (
     <RecoilRoot>
       <div>
         {/* 메인사이트 */}
         <Route exact path= "/">
-          <TodoList/>
+          <input ref={inputRef} type="text" placeholder="id"/>
+          <button onClick={loginAlert}>Login</button>
         </Route>
         {/* 블록체인 clone 사이트 */}
         <Route exact path="/blockChain">
