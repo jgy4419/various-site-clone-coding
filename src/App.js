@@ -12,39 +12,20 @@ import Button from './SpecificPart/Button/button';
 import Slide from '../src/SpecificPart/Slide/slide';
 import Text from './SpecificPart/Text/Text';
 import Menu from './SpecificPart/MenuBar/Menu';
+import InfiniteScroll from './SpecificPart/Scroll/infiniteScroll';
+import Home from './Home';
+import UnMountText from './SpecificPart/Unmount/UnmountText';
+import Sceleton from './SpecificPart/Loading/Skeleton';
+import Drag from './SpecificPart/Drag/Drag';
 
-// Todo
-import TodoList from './RecoilTodo/TodoList';
-
-// Recoil
-// import {textState, charCountState} from './Recoil/atom';
-import {
-  RecoilRoot,
-  atom,
-  selector,
-  useRecoilState,
-  useRecoilValue
-} from 'recoil';
 
 function App(props) {
-  const inputRef = useRef();
-  
-  useEffect(() => {
-    console.log(inputRef);
-    inputRef.current.focus();
-  }, [])
-
-  const loginAlert = () => {
-    alert(`환영합니다. ${inputRef.current.value}`);
-    inputRef.current.focus();
-  }
   return (
-    <RecoilRoot>
+    // <RecoilRoot>
       <div>
         {/* 메인사이트 */}
         <Route exact path= "/">
-          <input ref={inputRef} type="text" placeholder="id"/>
-          <button onClick={loginAlert}>Login</button>
+          <Home/>
         </Route>
         {/* 블록체인 clone 사이트 */}
         <Route exact path="/blockChain">
@@ -74,12 +55,28 @@ function App(props) {
         <Route exact path="/menu">
           <Menu/>
         </Route>
+        {/* 무한스크롤 */}
+        <Route exact path="/infiniteScroll">
+          <InfiniteScroll/>
+        </Route>
+        {/* unmountText 애니메이션 */}
+        <Route exact path="/unmountText">
+          <UnMountText/>
+        </Route>
+      {/* 스켈레톤 UI */}
+      <Route exact path="/sceleton">
+        <Sceleton/>
+      </Route>
+      {/* Drag 기능 */}
+      <Route exact path="/drag">
+        <Drag/>
+      </Route>
         {/* ToDoList */}
         {/* <Route exact path="/todoList">
           <TodoList/>
         </Route> */}
       </div>
-    </RecoilRoot>
+    // </RecoilRoot>
   );
 }
 
