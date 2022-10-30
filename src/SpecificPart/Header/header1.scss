@@ -1,0 +1,53 @@
+@mixin BasicItem(){
+    font-size: 20px;
+    font-weight: 700;  
+    cursor: pointer;    
+}
+
+.header1Contain{
+    position: relative;
+    width: 100vw;
+    height: 100px;
+    .inner{
+        position: absolute;
+        width: 80%;
+        margin: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        .items{
+            display: flex;
+            gap: 100px;
+            .logo{
+                @include BasicItem();              
+                margin-right: 50px;
+            }
+            .item{
+                @include BasicItem();
+                transition: .3s;
+            }
+            .item:hover{
+                color: rgb(149, 164, 247);
+                border-bottom: 2px solid rgb(149, 164, 247);
+            }
+        }
+        .hoverItemMenus{
+            position: absolute;
+            transition: .5s;
+            opacity: 0;
+            margin: auto;
+            left: 0;
+            display: flex;
+            width: 100%;
+            height: 200px;
+            .items-list{
+                width: 100%;
+                .item-list{
+                    @include BasicItem();
+                    font-weight: 600;
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+}

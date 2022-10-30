@@ -17,12 +17,19 @@ import Home from './Home';
 import UnMountText from './SpecificPart/Unmount/UnmountText';
 import Sceleton from './SpecificPart/Loading/Skeleton';
 import Drag from './SpecificPart/Drag/Drag';
-
+import Grid1 from './SpecificPart/Grid/Grid1';
+import Header1 from './SpecificPart/Header/header1';
+import ScrollSideEvent from './SpecificPart/Scroll/ScrollSideEvent';
+import Login from './SpecificPart/Login/Login';
+import Test from './SpecificPart/Loading/Test';
 
 function App(props) {
   return (
     // <RecoilRoot>
-      <div>
+    <div>
+      <Route exact path="/test">
+        <Test/>
+      </Route>
         {/* 메인사이트 */}
         <Route exact path= "/">
           <Home/>
@@ -58,7 +65,10 @@ function App(props) {
         {/* 무한스크롤 */}
         <Route exact path="/infiniteScroll">
           <InfiniteScroll/>
-        </Route>
+      </Route>
+      <Route exact path="/scrollSideEvent">
+          <ScrollSideEvent/>
+      </Route>
         {/* unmountText 애니메이션 */}
         <Route exact path="/unmountText">
           <UnMountText/>
@@ -70,6 +80,15 @@ function App(props) {
       {/* Drag 기능 */}
       <Route exact path="/drag">
         <Drag/>
+      </Route>
+      <Route exact path="/grid1">
+        <Grid1/>
+      </Route>
+      <Route exact path="/header1">
+        <Header1/>    
+      </Route>
+      <Route exact path="/login">
+        <Login/>
       </Route>
         {/* ToDoList */}
         {/* <Route exact path="/todoList">

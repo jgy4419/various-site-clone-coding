@@ -1,0 +1,20 @@
+.slide2Contain{
+    width: 70vw;
+    margin: auto;
+    overflow-x: scroll;
+    .conteudo{
+        // overflow-x: scroll;  
+        display: flex;
+        width: 350px;
+        scroll-snap-type: x mandatory;
+        scroll-padding: 25px;
+        column-gap: 20px;
+        .card{
+            flex: 0 0 100%;
+            padding: 30px;
+            scroll-snap-align: start;
+            border: 2px solid #333;
+            border-radius: 30px;
+        }
+    }
+}

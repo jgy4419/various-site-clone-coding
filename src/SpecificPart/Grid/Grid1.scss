@@ -1,0 +1,29 @@
+ul, li, oi{
+    list-style: none;
+}
+
+.grid1Contain{
+    width: 100vw;
+    height: 100vh;
+    .inner{
+        .items{
+            display: grid;
+            grid-template-columns: repeat(5, 200px);
+            // grid-template-rows: 200px 200px 200px 200px 200px;
+            // repeat(반복횟수, 반복값)
+            grid-template-rows: repeat(8, 200px);
+            // grid-auto-flow: dense;
+            gap: 10px;
+            .item{
+                background-color: lightgrey;
+                border-radius: 10px;
+            }
+            .item:is(:nth-child(2), :nth-child(4), :nth-child(7), :nth-child(13)){
+                // grid-column: span 1;
+                // span은 그리드 항목의 그리드 영역의 해당 가장자리가 반대쪽 가장자리에서 n줄이 되도록 그리드 항목의 배치에 그리드 범위를 제공한다.
+                grid-row: span 2;
+                background-color: blue;
+            }
+        }
+    }
+}

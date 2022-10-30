@@ -1,0 +1,89 @@
+.notification {
+    position: relative;
+    display: inline-block;
+    max-width: 300px;
+    padding: 20px 15px;
+    border-radius: 4px;
+    background-color: #141619;
+    color: #f6f5f9;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, .1);
+    transform: translateY(30px);
+    opacity: 0;
+    visibility: hidden;
+    animation: fade 4s linear infinite;
+    .progress{
+        position: absolute;
+        left: 5px;
+        bottom: 5px;
+        width: 0;
+        height: 3px;
+        background-image: linear-gradient(to right, #529bdb, #3250bf);
+        border-radius: 4px;
+        animation: progress 3s .25s linear infinite;
+    }
+}
+
+@keyframes fade {
+    5%{
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0px);
+    }
+    90%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    95%{
+        opacity: 0;
+    }
+    100%{ 
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+}
+
+@keyframes progress {
+    to{
+        width: calc(100% - 10px);
+    }
+}
+
+.input-group{
+    top: 50px;
+    position: relative;
+    .input{
+        padding: 10px;
+        background: #d3edf8;
+        border-radius: 2px;
+        outline: none;
+        color: #444444;
+        border: 1px solid #0da2ff;
+    }
+    .placeholder{
+        position: absolute;
+        top: 10px;
+        left: 8px;
+        font-size: 14px;
+        padding: 0px 5px;
+        color: #0da2ff;
+        transition: .3s;
+        pointer-events: none;
+    }
+    .input:focus + .placeholder,
+    .input:not(:placeholder-shown)
+    + .placeholder{
+        top: -8px;
+    }
+}
+.paragraph{
+    
+}
+.paragraph span{
+    display: block;
+    opacity: 0;
+    animation: reveal .5s forwards var(--delay);
+}
+@keyframes reveal {
+    from{translate: 0 20px}
+    to{transition: none; opacity: 1};
+}

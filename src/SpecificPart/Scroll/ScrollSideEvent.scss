@@ -1,0 +1,37 @@
+body{
+    background-color: #efedd6;
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    overflow-x: hidden;
+    h1{
+        margin: 100px;
+        font-weight: 900;
+    }
+    .box{
+        background-color: #9535f0;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 70%;
+        height: 100px;
+        margin: 100px 60px;
+        border-radius: 10px;
+        box-shadow: 0px 3px 12px #9535f0;
+        transform: translateX(400%);
+        transition: transform 0.8s ease;
+        h2{
+            font-size: 45px;
+        }
+    }
+    .box:nth-child(even){
+        transform: translateX(-400%);
+    }
+    .box.show{
+        transform: translateX(0);
+    }
+}
