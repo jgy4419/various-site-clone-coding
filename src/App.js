@@ -18,6 +18,7 @@ import UnMountText from './SpecificPart/Unmount/UnmountText';
 import Sceleton from './SpecificPart/Loading/Skeleton';
 import Drag from './SpecificPart/Drag/Drag';
 import Grid1 from './SpecificPart/Grid/Grid1';
+import Grid2 from './SpecificPart/Grid/Grid2';
 import Header1 from './SpecificPart/Header/header1';
 import ScrollSideEvent from './SpecificPart/Scroll/ScrollSideEvent';
 import Login from './SpecificPart/Login/Login';
@@ -83,6 +84,9 @@ function App(props) {
       </Route>
       <Route exact path="/grid1">
         <Grid1/>
+      </Route>
+      <Route exact path="/grid2">
+        <Grid2/>
       </Route>
       <Route exact path="/header1">
         <Header1/>    

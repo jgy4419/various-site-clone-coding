@@ -1,0 +1,42 @@
+/* 
+    - repeat : 반복되는 값을 자동으로 처리해준다.
+    - minmax : 최솟값과 최댓값을 지정할 수 있는 함수이다. 
+    ex) minmax(100px auto); 는 최소한 100px, 최대는 자동으로 늘어나게 이다.
+    - auto-fill, auto-fit : column 개수를 미리 정하지 않고 설정된 너비가 허용하는 한 최대한 셀을 채워준다.
+    - row-gap, column-gap : 그리드 셀 사이의 간격을 설정
+    - grid-auto-column, grid-auto-rows : 통제를 벗어난 위치에 있는 트랙의 크기를 지정한느 속성.
+    - grid-row, grid-column : Grid 아이템에 적용하는 속성으로, 각 셀의 영역을 지정.
+    - grid-template-areas : 각 영역(Area)에 이름을 붙이고, 그 이름을 이용해 배치
+*/
+
+.container {
+    padding: 20px;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 100px auto 50px;
+    grid-template-areas: 
+        "header header"
+        "section aside"
+        "footer footer";
+    grid-gap : 20px;
+    justify-content : center;
+    .item{
+        text-align: center;
+        border: 2px solid #333;
+        border-radius: 20px;
+    }
+    .item:nth-child(1){
+        grid-area: header;
+    }
+    .item:nth-child(2){
+        grid-area: section;
+    }
+    .item:nth-child(3){
+        grid-area: aside;
+    }
+    .item:nth-child(4){
+        grid-area: footer;
+    }
+}
