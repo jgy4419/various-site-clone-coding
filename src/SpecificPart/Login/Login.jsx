@@ -25,5 +25,7 @@ const Login = () => {
         </div>
     );
 };
+// 비밀번호 유효성 체크 UI : https://www.youtube.com/watch?v=Hi8DVOaZ0Ug
+
 
 export default Login;

@@ -4,39 +4,88 @@
     ex) minmax(100px auto); 는 최소한 100px, 최대는 자동으로 늘어나게 이다.
     - auto-fill, auto-fit : column 개수를 미리 정하지 않고 설정된 너비가 허용하는 한 최대한 셀을 채워준다.
     - row-gap, column-gap : 그리드 셀 사이의 간격을 설정
-    - grid-auto-column, grid-auto-rows : 통제를 벗어난 위치에 있는 트랙의 크기를 지정한느 속성.
+    - grid-auto-columns, grid-auto-rows : 통제를 벗어난 위치에 있는 트랙의 크기를 지정한는 속성. (columns이나, rows의 개수를 정확하게 모를 때 사용.)
     - grid-row, grid-column : Grid 아이템에 적용하는 속성으로, 각 셀의 영역을 지정.
     - grid-template-areas : 각 영역(Area)에 이름을 붙이고, 그 이름을 이용해 배치
 */
 
 .container {
-    padding: 20px;
-    width: 100vw;
-    height: 100vh;
     display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-template-rows: 100px auto 50px;
+    // grid-template-columns: repeat(3, 1fr);
+    // grid-template-columns: minmax(100px, auto);
+    // auto-fill 크기를 20%로 설정했으므로, 1개의 row에는 5개의 셀이 들어간다. 모자르면 빈 공간이 남게된다.
+    // auto-fit을 사용하면, 남는 공간을 채워준다. (auto-fit과 auto-fill의 차이점)
+    // grid-template-columns: repeat(auto-fill, minmax(20%, auto));
+    // grid-template-rows: repeat(3, minmax(100px, auto));
+
+    // grid-template-columns: 50px;
+    // grid-auto-columns: 1fr 2fr;
     grid-template-areas: 
-        "header header"
-        "section aside"
-        "footer footer";
-    grid-gap : 20px;
-    justify-content : center;
-    .item{
-        text-align: center;
-        border: 2px solid #333;
-        border-radius: 20px;
-    }
-    .item:nth-child(1){
+        "header header header"
+        "a main b"
+        ". . ."
+        "footer footer footer";
+    grid-gap: 10px;
+    .header {
         grid-area: header;
     }
-    .item:nth-child(2){
-        grid-area: section;
+    .item{
+        background-color: #333;
+        height: 50px;
     }
-    .item:nth-child(3){
-        grid-area: aside;
-    }
-    .item:nth-child(4){
-        grid-area: footer;
-    }
+    /*
+        (조금 더 알아보기) grid-auto-flow : 아이템이 자동 배치되는 흐름을 결정하는 속성이다.
+        - dense 값은 기본적으로 빈 셀을 채우는 알고리즘이며, row와 column에 따라 기준이 달라진다.
+        - grid 배치의 기본 설정은 아이템이 row를 기준으로 순서대로 배치가 되다가 들어갈 자리가 없으면 그 칸은 비워두고 아래로 배치된다.
+    */
+    // .item:nth-child(1) {
+    //     grid-column: 2;
+    // }
+    // .item:nth-child(2) {
+    //     grid-column: 3;
+    // }
+    // .item:nth-child(3) {
+    //     grid-column: 4;
+    // }
+    // .item:nth-child(4) {
+    //     grid-column: 5;
+    // }
+    // .item:nth-child(5) {
+    //     grid-column: 6;
+    // }
+    // .item:nth-child(6) {
+    //     grid-column: 7;
+    // }
 }
+
+// .container {
+//     padding: 20px;
+//     width: 100vw;
+//     height: 100vh;
+//     display: grid;
+//     grid-template-columns: 3fr 1fr;
+//     grid-template-rows: 100px auto 50px;
+//     grid-template-areas: 
+//         "header header"
+//         "section aside"
+//         "footer footer";
+//     grid-gap : 20px;
+//     justify-content : center;
+//     .item{
+//         text-align: center;
+//         border: 2px solid #333;
+//         border-radius: 20px;
+//     }
+//     .item:nth-child(1){
+//         grid-area: header;
+//     }
+//     .item:nth-child(2){
+//         grid-area: section;
+//     }
+//     .item:nth-child(3){
+//         grid-area: aside;
+//     }
+//     .item:nth-child(4){
+//         grid-area: footer;
+//     }
+// }

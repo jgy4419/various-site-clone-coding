@@ -1,5 +1,6 @@
 import React from 'react';
 import Button1 from './button1';
+import Button2 from './button2';
 
 export default function Button(){
     const defaultStyle = {
@@ -8,7 +9,8 @@ export default function Button(){
     }
     return(
         <div style={defaultStyle}>
-            <Button1/>
+            <Button1 />
+            <Button2 />
         </div>
     )
 }

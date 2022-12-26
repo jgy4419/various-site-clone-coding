@@ -7,6 +7,16 @@ const Home = () => {
     }, []);
     return (
         <>
+            {/* flex -> grid */}
+            <div className="wrapper">
+                <header>header</header>
+                <section>
+                    <nav>Nav</nav>
+                    <main>Main</main>
+                    <aside>Aside</aside>
+                </section>
+                <footer>Footer</footer>
+            </div>
             <div className="notification">
                 <p>Welcome back</p>
                 <span className="progress"/>
@@ -28,6 +38,8 @@ const Home = () => {
                 <li className="test" data-id="3" data-user-job="programs">Hero</li>
                 <li className="test" data-id="4" data-user-job="ceo">Kero</li>
             </ul>
+
+            <div className="gradient-background"/>
         </>
     );
 };
