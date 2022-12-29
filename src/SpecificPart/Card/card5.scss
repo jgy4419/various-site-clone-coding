@@ -1,0 +1,22 @@
+.card5{
+    margin: auto;
+    width: 150px;
+    height: 200px;
+    background: 
+        url('https://blog.kakaocdn.net/dn/bj4oa7/btqLJWFLMgd/wu4GV8PKbXdICuyW0me0zk/img.jpg')
+        center no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    transform:
+        rotate(20deg)
+        skew(-10deg, -5deg);
+    transition: 
+        translate 0.25s,
+        box-shadow 0.25s;
+}
+.card5:hover {
+    translate: 0 -30px;
+    box-shadow: 5px 3px lightgrey,
+        10px 6px grey,
+        15px 9px #333;
+}
