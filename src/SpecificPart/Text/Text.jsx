@@ -1,4 +1,5 @@
 import Text1 from './Text1';
+import Text2 from './Text2';
 
 export default function Text(){
     const defualtStyle = {
@@ -10,7 +11,8 @@ export default function Text(){
     return(
         <>
             <div style={defualtStyle}>
-                <Text1/>
+                <Text1 />
+                <Text2 />
             </div>
         </>
     )

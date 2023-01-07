@@ -1,0 +1,33 @@
+.showcase{
+    width: 100vw;
+    height: 30vh;
+    position: relative;
+    img{
+        transition: .3s;
+        opacity: 0;
+        width: 50%;
+        height: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        background-color: #fff;
+    }
+    .title {
+        transition: 1s;
+        width: 50%;
+        height: 50%;
+        margin-left: 0px;
+        background-color: #000;
+        font-size: 100px;
+        color: #fff;
+    }
+}
+.showcase:hover{
+    img{
+        opacity: 1;
+    }
+    .title{
+        mix-blend-mode: multiply
+    }
+}
