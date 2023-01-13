@@ -1,0 +1,36 @@
+.effect1_contain{
+    margin: 30% -15vw;
+    .parallax-text{
+        position: absolute;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 15vw;
+        font-weight: 700;
+        font-style: italic;
+        top: 800px;
+    }
+    .parallax-text::after {
+        content: attr(text);
+        position: absolute;
+        font-weight: 700;
+        z-index: 100;
+        top: 0;
+        left: 0;
+        color: transparent;
+        -webkit-text-stroke: 0.15vw black;
+    }
+    img{
+        position: absolute;
+        margin-left: -200px; // 임시로 이ㅇ
+        width: 50vw;
+        animation: sneakerAnimation 2s infinite alternate;
+    }
+}
+@keyframes sneakerAnimation {
+    0%, 10%{
+        transform:
+        translate(100vw, 0) rotate(30deg);
+    }
+    90%, 100%{
+        transform: rotate(-30deg);
+    }
+}
