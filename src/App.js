@@ -23,6 +23,11 @@ import Header1 from './SpecificPart/Header/header1';
 import ScrollSideEvent from './SpecificPart/Scroll/ScrollSideEvent';
 import Login from './SpecificPart/Login/Login';
 import Test from './SpecificPart/Loading/Test';
+import Effect from './SpecificPart/Effect/Effect';
+
+import MusicPlayer from './SpecificPart/musicPlayer/MusicPlayer'
+
+// import Hoc from './Hoc/Hoc';
 
 function App(props) {
   return (
@@ -93,6 +98,12 @@ function App(props) {
       </Route>
       <Route exact path="/login">
         <Login/>
+      </Route>
+      <Route exact path="/effect">
+        <Effect/>
+      </Route>
+      <Route exact path="/musicplayer">
+        <MusicPlayer/>
       </Route>
         {/* ToDoList */}
         {/* <Route exact path="/todoList">

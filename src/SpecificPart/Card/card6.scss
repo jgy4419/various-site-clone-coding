@@ -1,0 +1,52 @@
+.card6_container{
+    width: 100vw;
+    position: absolute;
+    left: -80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    .box {
+        position: relative;
+        width: 20rem;
+        height: 20rem;
+        margin: 3rem;
+        background-color: #fff;
+        box-shadow: none;
+    }
+    .box:hover .imgBox{ 
+        transform: translate(-3.5rem, -3.5rem);
+    }
+    .box:hover .content {
+        transition: .1s;
+        transform: translate(8.5rem, 8.5rem);
+        h2{
+            color: #333;
+            margin-left: -150%;
+            font-size: 20px;
+            text-align: center;
+            span {
+                color: rgb(158, 158, 158);
+            }
+        }
+    }
+    .content{
+        overflow: none;
+    }
+    .imgBox {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        transition: all 0.5s ease-in-out;
+    }
+    img{
+        border-radius: 10px;
+        width: 20rem;
+        height: 20rem;
+        object-fit: cover;
+        resize: both;
+    }
+}
