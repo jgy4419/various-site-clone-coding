@@ -1,0 +1,89 @@
+button {
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: none;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+}
+.arrow-text{
+    position: absolute;
+    font-size: 40px;
+    font-weight: 500;
+    color: #fff;
+    margin-left: 15px;
+}
+button:hover .circle {
+    width: 100%;
+}
+button:hover .button-text {
+    color: #ffffff;
+}
+.about-me:hover {
+    .arrow-text{
+        transition: 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        transform: translateX(10px);
+    }
+    .arrow-text::before{
+        // transition: 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        position: absolute;
+        margin-left: -10px;
+        content: '-'
+    }
+}
+.about-me {
+    width: 12rem;
+    .circle{
+        transition: 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        position: relative;
+        display: block;
+        margin: 0;
+        width: 3rem;
+        height: 3rem;
+        background: #30b9b9;
+        border-radius: 1.625rem;
+        .icon{
+            transition: 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            // background: #ffffff;
+            .arrow{
+                transition: 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+                left: 0.625rem;
+                width: 1.125rem;
+                height: 0.125rem;
+                background: none;
+                color: #fff;
+            }
+            .arrow::before {
+                position: absolute;
+                content: "";
+                top: -0.29rem;
+                right: 0.0625rem;
+                width: 0.625rem;
+                height: 0.625rem;
+                border-top: 0.125rem solid #ffffff;
+                border-right: 0.125rem solid #ffffff;
+                transform: rotate(45deg);
+            }
+        }
+    }
+    .button-text {
+        transition: 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        padding: 0.75rem 0;
+        margin: 0 0 0 1.85rem;
+        color: #28b5b5;
+        font-weight: 700;
+        line-height: 1.6;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}

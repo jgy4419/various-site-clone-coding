@@ -5,6 +5,7 @@ import Card3 from './card3';
 import Card4 from './card4';
 import Card5 from './card5';
 import Card6 from './card6';
+import Card7 from './card7';
 
 export default function Card(){
     const defaultStyle = {
@@ -20,7 +21,8 @@ export default function Card(){
                 <Card4/>
             </div>
             <Card5 />
-            <Card6/>
+            <Card6 />
+            <Card7/>
         </div>
     )
 }
