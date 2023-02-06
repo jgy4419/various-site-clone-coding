@@ -1,0 +1,29 @@
+img{
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.imgcarousel-contain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    // background-color: #141414;
+    #mainPhoto {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        margin-bottom: 10px;
+    }
+    .imgCarousel {
+        width: 100px;
+        height: 100px;
+        transition: 0.3s;
+    }
+    .imgCarousel:hover {
+        width: 110px;
+        height: 110px;
+        border: 2px solid white;
+        margin: 3px;
+    }
+}
