@@ -1,0 +1,20 @@
+.main_contain{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    h1{
+        animation: 3s ease-in 1s reverse both running slidein;
+    }
+}
+@keyframes slidein {
+    from {
+        transform: translateX(100%);
+        width: 300%;
+    }
+  
+    to {
+        transform: translateX(0%);
+        width: 100%;
+    }
+  }

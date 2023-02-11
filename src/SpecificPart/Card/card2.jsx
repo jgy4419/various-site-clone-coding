@@ -1,6 +1,16 @@
 // ort React from 'react';
+import { useEffect, useState } from 'react'
 import './card2.scss'
-export default function card2(){
+export default function Card2({setWelcomeState}) {
+    const [scrollState, setScrollState] = useState(false);
+    const [timerState, setTimerState] = useState(false);
+    useEffect(() => {
+        // if (스크롤감지가 되면) setScrollState(true);
+        // setTimeout(() => {
+            // document.querySelector('.card2Contain').classList.add('none');
+            // setScrollState(true);
+        // }, 3000);
+    }, []);
     return(
         <>
             <div className="card2Contain">

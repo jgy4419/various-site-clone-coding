@@ -25,7 +25,9 @@ import Login from './SpecificPart/Login/Login';
 import Test from './SpecificPart/Loading/Test';
 import Effect from './SpecificPart/Effect/Effect';
 
-import MusicPlayer from './SpecificPart/musicPlayer/MusicPlayer'
+// Technology
+import Pagination from './Technology/pagenation/Posts';
+
 
 // import Hoc from './Hoc/Hoc';
 
@@ -102,8 +104,8 @@ function App(props) {
       <Route exact path="/effect">
         <Effect/>
       </Route>
-      <Route exact path="/musicplayer">
-        <MusicPlayer/>
+      <Route exact path="/pagination">
+        <Pagination/>
       </Route>
         {/* ToDoList */}
         {/* <Route exact path="/todoList">

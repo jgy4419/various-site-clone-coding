@@ -1,5 +1,8 @@
 .card2Contain{
     position: relative;
+    z-index: 1;
+    transition: 1s;
+    // opacity: 0;
     margin: auto;
     width: 70vw;
     height: 700px;

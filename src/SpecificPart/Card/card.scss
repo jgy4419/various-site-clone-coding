@@ -1,0 +1,20 @@
+.card_main_contain{
+    position: relative;
+    z-index: 100;
+    transition: 1s;
+    width: 100vw;
+    height: 100vh;
+    background-color: #333;
+}
+.card_main_contain.up{
+    transform: translateY(-100vh);
+}
+.main_contain {
+    width: 100vw;
+    height: 100vh;
+    background-color: orange;
+    transition: 1s;
+}
+.change_background{
+    transform: translateY(-100%);
+}
