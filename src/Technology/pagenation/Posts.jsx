@@ -1,24 +1,12 @@
-import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import Pagination from './Pagination';
+import Post from './Post';
 
-function Posts() {
-    const [posts, setPosts] = useState([]);
-    const [limit, setLimit] = useState(10);
-    const [page, setPage] = useState(1);
-    const offset = (page - 1) * limit;
-    
-    useEffect(() => {
-        fetch("https://jsonplaceholder.typicode.com/posts")
-            .then(res => res.json())
-            .then(data => setPosts(data));
-    }, []);
-
+function Posts({ posts, limit, setLimit, offset, page, setPage}) {
+    const postOption = [10, 20, 30, 40, 50];
     return (
         <Layout>
-            <header>
-                <h1>게시물 목록</h1>
-            </header>
+            <h1>게시물 목록</h1>
 
             <label>
                 페이지 당 표시할 게시물 수:&nbsp;
@@ -27,12 +15,11 @@ function Posts() {
                     value={limit}
                     onChange={({target: {value}}) => setLimit(Number(value))}
                 >
-                    <option value="10">10</option>
-                    <option value="12">12</option>
-                    <option value="20">20</option>
-                    <option value="50">50</option>
-                    <option value="100">100</option>
-
+                    {
+                        postOption.map(option => (
+                            <option value={option}>{option}</option>                            
+                        ))
+                    }
                 </select>
             </label>
             
@@ -40,10 +27,7 @@ function Posts() {
                 {
                     posts.slice(offset, offset + limit).map(({ id, title, body }) => (
                         <article key={id}>
-                            <h3>
-                                {id}. {title}
-                            </h3>
-                            <p>{body}</p>
+                            <Post id={id} title={title} body={body} />
                         </article>
                     ))
                 }

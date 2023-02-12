@@ -26,7 +26,7 @@ import Test from './SpecificPart/Loading/Test';
 import Effect from './SpecificPart/Effect/Effect';
 
 // Technology
-import Pagination from './Technology/pagenation/Posts';
+import Pagination from './Technology/pagenation/index.jsx';
 
 
 // import Hoc from './Hoc/Hoc';
