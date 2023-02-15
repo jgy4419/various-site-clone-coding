@@ -24,10 +24,11 @@ import ScrollSideEvent from './SpecificPart/Scroll/ScrollSideEvent';
 import Login from './SpecificPart/Login/Login';
 import Test from './SpecificPart/Loading/Test';
 import Effect from './SpecificPart/Effect/Effect';
+import MultiStepProgress from './SpecificPart/MultiStepProgress/MultiStepProgress';
 
 // Technology
 import Pagination from './Technology/pagenation/index.jsx';
-
+import Search from './Technology/search/SearchIndex';
 
 // import Hoc from './Hoc/Hoc';
 
@@ -104,8 +105,14 @@ function App(props) {
       <Route exact path="/effect">
         <Effect/>
       </Route>
+      <Route exact path="/multiStepProgress">
+        <MultiStepProgress/>
+      </Route>
       <Route exact path="/pagination">
         <Pagination/>
+      </Route>
+      <Route exact path="/search">
+          <Search/>
       </Route>
         {/* ToDoList */}
         {/* <Route exact path="/todoList">
