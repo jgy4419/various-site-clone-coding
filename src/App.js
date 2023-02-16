@@ -25,6 +25,7 @@ import Login from './SpecificPart/Login/Login';
 import Test from './SpecificPart/Loading/Test';
 import Effect from './SpecificPart/Effect/Effect';
 import MultiStepProgress from './SpecificPart/MultiStepProgress/MultiStepProgress';
+import DragAndDrop from './SpecificPart/DragAndDrop/DragAndDrop';
 
 // Technology
 import Pagination from './Technology/pagenation/index.jsx';
@@ -107,6 +108,9 @@ function App(props) {
       </Route>
       <Route exact path="/multiStepProgress">
         <MultiStepProgress/>
+      </Route>
+      <Route exact path="/draganddrop">
+        <DragAndDrop/>
       </Route>
       <Route exact path="/pagination">
         <Pagination/>
