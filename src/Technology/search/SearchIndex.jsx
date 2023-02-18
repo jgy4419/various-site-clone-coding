@@ -14,7 +14,7 @@ const Search = () => {
 
     return (
         <>
-            <SearchBar data={data} setData={setData} setSearchValue={setSearchValue} />
+            <SearchBar setData={setData} setSearchValue={setSearchValue} />
             {
                 data.filter((item) => {
                     if (searchValue === '') {

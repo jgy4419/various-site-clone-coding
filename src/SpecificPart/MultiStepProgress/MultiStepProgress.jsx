@@ -2,11 +2,10 @@ import React, { useRef, useState } from 'react';
 import './MultiStepProgress.scss';
 
 const MultiStepProgress = () => {
-    const buttons = document.querySelectorAll('button');
-    let progressArr = [2, 3, 4];
     let [currentProgress, setCurrentProgress] = useState(1);
     const circle = useRef();
     const progressBar = useRef();
+    const progressArr = [2, 3, 4];
     
     const minusSteps = (e) => {
         let progressCount = Number(circle.current.childNodes[currentProgress - 2].textContent);
@@ -16,17 +15,16 @@ const MultiStepProgress = () => {
             circle.current.childNodes[progressCount].classList.remove('active');
         }
     }
+
     const addSteps = (e) => {
         let progressCount = Number(circle.current.childNodes[currentProgress - 1].textContent);
         setCurrentProgress(prev => prev += 1);
         progressBar.current.style = `width: ${progressCount * 25}%`;   
         if (currentProgress === progressCount) {
-            if (progressCount === 0) { 
-                buttons[1].disabled = true;
-            }
             circle.current.childNodes[progressCount].classList.add('active');
         }
     }
+
     return (
         <div className="container">
             <div className="steps" ref={circle}>
@@ -34,7 +32,7 @@ const MultiStepProgress = () => {
                 {
                     progressArr.map((i) => (
                         
-                        <span className="circle">{i}</span>
+                        <span className="circle">{i}</span> 
                     ))
                 }
                 <div className="progress-bar">
@@ -42,10 +40,8 @@ const MultiStepProgress = () => {
                 </div>
             </div>
             <div className="buttons">
-                {/* eslint-disable-next-line no-restricted-globals */}
-                <button id="prev" disabled={currentProgress === 1 ? true : false} onClick={(() => {minusSteps(event)})}>Prev</button>
-                {/* eslint-disable-next-line no-restricted-globals */}
-                <button id="next" disabled={currentProgress === 4 ? true : false} onClick={() => {addSteps(event)}}>Next</button>
+                <button id="prev" disabled={currentProgress === 1 ? true : false} onClick={(() => {minusSteps()})}>Prev</button>
+                <button id="next" disabled={currentProgress === 4 ? true : false} onClick={() => {addSteps()}}>Next</button>
             </div>
         </div>
     );
