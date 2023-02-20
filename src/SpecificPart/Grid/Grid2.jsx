@@ -1,23 +1,15 @@
 import React from 'react';
 import './Grid2.scss';
-
-
+// Grid layout 공부하기
 const Grid2 = () => {
     return (
         <>
-            <div className="container">
-                <header className="header">
-
-                </header>
-                <div className="item">A</div>
-                <div className="item">B</div>
-                <div className="item">C</div>
-                <div className="item">D</div>
-                <div className="item">E</div>
-                <div className="item">F</div>
-                <div className="item">G</div>
-                <div className="item">H</div>
-                <div className="item">I</div>
+           <div class="contains">
+                <div class="header item">1</div>
+                <div class="sidebar-a item">2</div>
+                <div class="main-content item">3</div>
+                <div class="sidebar-b item">4</div>
+                <div class="footer item">5</div>
             </div>
         </>
     );
