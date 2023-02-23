@@ -1,0 +1,27 @@
+h1 {
+    // position: fixed;
+    // z-index: 10;
+}
+.infiniteScroll_container {
+    // 부모에 position: absolute를 넣으면 정상작동이 되지 않는다.
+    position: relative;
+    z-index: 1;
+    width: 100vw;
+    .datas {
+        text-align: center;
+        left: 0;
+        right: 0;
+        margin: auto;
+        .data {
+            width: 400px;
+            height: 150px;
+            background-color: #dcdcdc;
+            border-radius: 20px;
+            margin-top: 10px;
+            font-size: 20px;
+            font-weight: 700;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+    }
+}

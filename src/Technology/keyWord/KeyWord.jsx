@@ -13,7 +13,7 @@ const KeyWord = () => {
         setInputContent('');
     }
     const deleteKeyWord = (index) => {
-        setKeyWord(keyWord.filter((item, i) => item[index] !== item[i]));
+        setKeyWord(keyWord.filter((item, i) => item !== keyWord[index]));
         setInputContent('');
     }
     return (

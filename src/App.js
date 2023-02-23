@@ -30,6 +30,9 @@ import DragAndDrop from './SpecificPart/DragAndDrop/DragAndDrop';
 // Technology
 import Pagination from './Technology/pagenation/index.jsx';
 import Search from './Technology/search/SearchIndex';
+import KeyWord from './Technology/keyWord/KeyWord';
+import InfiniteScroller from './Technology/infiniteScroll/InfiniteScroll';
+// import InfiniteScroll from './Technology/infiniteScroll/InfiniteScroll';
 
 // import Hoc from './Hoc/Hoc';
 
@@ -117,6 +120,12 @@ function App(props) {
       </Route>
       <Route exact path="/search">
           <Search/>
+      </Route>
+      <Route exact path="/KeyWord">
+        <KeyWord/>
+      </Route>
+      <Route exact path="/InfiniteScroller">
+        <InfiniteScroller/>
       </Route>
         {/* ToDoList */}
         {/* <Route exact path="/todoList">

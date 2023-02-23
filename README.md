@@ -22,3 +22,24 @@
 
 ## 파일명 : Card5
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/76980526/209892203-2d943bc9-6dd0-4d32-ba5d-d43ea857eeee.gif)
+
+## 파일명 : Card8
+https://user-images.githubusercontent.com/76980526/220794012-dbd34ec3-ee17-49d7-ab99-f238b91217da.mov
+
+## 파일명 : imgCarousel
+![imgCarousel](https://user-images.githubusercontent.com/76980526/220793443-e190b376-b9e1-45fb-8b97-10e38f31e875.gif)
+
+## 파일명 : progress bar
+https://user-images.githubusercontent.com/76980526/220793538-8e81db85-954f-431f-9e00-e1e6846c65c3.mov
+
+## 파일명 : button4
+https://user-images.githubusercontent.com/76980526/220793712-c4ee1c7d-836d-43c0-8871-26819ee85c3b.mov
+
+## 파일명 : Text1, Text2
+https://user-images.githubusercontent.com/76980526/220793816-97bd7a84-89c4-445e-8563-eb1623b83da5.mov
+
+## 파일명 : Effect1
+https://user-images.githubusercontent.com/76980526/220793882-078c84af-77d8-4058-b4b6-04f923c435b6.mov
+
+## 파일명 : DragAndDrop
+https://user-images.githubusercontent.com/76980526/220793925-5b82408e-2aab-401b-a349-5391aea4f936.mov
