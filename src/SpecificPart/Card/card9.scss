@@ -1,0 +1,50 @@
+.card9_contain {
+    position: relative;
+    width: 100vw;
+    height: 70vh;
+    background-color: #000;
+    .card9s {
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        width: 100%;
+        .card9 {
+            position: relative;
+            overflow: hidden;
+            width: 30%;
+            height: 80px;
+            background-color: #333;
+            box-sizing: content-box;
+            padding: 5%;
+            border-radius: 20px;
+            cursor: pointer;
+            .back_color {
+                position: absolute;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                border-radius: 50%;
+                background-color: orange;
+                width: 100%;
+                height: 100%;
+                transition: .5s;
+                transform: translate(60%, -60%);
+            }
+            .title, .content {
+                position: absolute;
+                z-index: 10;
+                color: #fff;
+            }
+            .content {
+                margin-top: 50px;
+            }
+        }
+        .card9:hover {
+            .back_color {
+                transform: translate(0%, 0%);
+                border-radius: 20px;
+            }
+        }  
+    }
+}

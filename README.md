@@ -26,6 +26,10 @@
 ## 파일명 : Card8
 https://user-images.githubusercontent.com/76980526/220794012-dbd34ec3-ee17-49d7-ab99-f238b91217da.mov
 
+## 파일명 : Card9
+![ezgif com-video-to-gif](https://user-images.githubusercontent.com/76980526/221396770-147dbae7-d129-4035-8282-3f7fbeee8fc4.gif)
+
+
 ## 파일명 : imgCarousel
 ![imgCarousel](https://user-images.githubusercontent.com/76980526/220793443-e190b376-b9e1-45fb-8b97-10e38f31e875.gif)
 

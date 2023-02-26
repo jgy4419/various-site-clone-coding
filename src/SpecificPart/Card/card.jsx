@@ -1,5 +1,4 @@
 import React from 'react';
-import CardMain from './cardMain';
 import Card1 from './card1';
 import Card2 from './card2';
 import Card3 from './card3';
@@ -8,6 +7,7 @@ import Card5 from './card5';
 import Card6 from './card6';
 import Card7 from './card7';
 import Card8 from './card8';
+import Card9 from './card9';
 import ResponsiveCard from './ResponsiveCard';
 
 export default function Card() {
@@ -20,7 +20,6 @@ export default function Card() {
     return(
         <>
             <div className="card_main_contain">
-                <CardMain/>
                 <Card2 />
                 <div style={defaultStyle} className="contain">
                     <Card1/>
@@ -33,6 +32,7 @@ export default function Card() {
                     <Card7 />
                     <ResponsiveCard />
                     <Card8/>
+                    <Card9/>
                 </div>
             </div>
         </>
