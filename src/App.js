@@ -5,6 +5,7 @@ import { Link, Route, Switch, useHistory, useParams} from 'react-router-dom';
 // cloneCoding
 import BlockChainMain from './clone/blockchainsite/blockChainMain';
 import ChungJungWonMain from '../src/clone/blockchainsite/ChungJungWonMain';
+import YoguyoOrder from './clone/blockchainsite/Yogiyo(Order)';
 
 // SpecificPart
 import Card from './SpecificPart/Card/card';
@@ -126,6 +127,9 @@ function App(props) {
       </Route>
       <Route exact path="/InfiniteScroller">
         <InfiniteScroller/>
+      </Route>
+      <Route exact path="/yoguyoOrder">
+        <YoguyoOrder/>
       </Route>
         {/* ToDoList */}
         {/* <Route exact path="/todoList">
