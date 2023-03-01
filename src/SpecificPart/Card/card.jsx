@@ -8,6 +8,7 @@ import Card6 from './card6';
 import Card7 from './card7';
 import Card8 from './card8';
 import Card9 from './card9';
+import Card10 from './card10';
 import ResponsiveCard from './ResponsiveCard';
 
 export default function Card() {
@@ -33,6 +34,7 @@ export default function Card() {
                     <ResponsiveCard />
                     <Card8/>
                     <Card9/>
+                    <Card10/>
                 </div>
             </div>
         </>

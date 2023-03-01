@@ -1,0 +1,101 @@
+.card10_contain{
+    margin-top: 10%;
+    width: 100vw;
+    height: 100vh;
+    background-color: #161623;
+    color: #fff;
+    .card10_inner {
+        opacity: .5;
+        position: relative;
+        z-index: 1;
+        margin: auto;
+        width: 15%;
+        height: 40%;
+        transition: .5s;
+        cursor: pointer;
+    }
+    .blurBack{
+        position: absolute;
+        border-radius: 20px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 100%;
+        height: 100%;
+        filter: blur(2px);
+        background: #d3cece
+    }
+    .content {
+        position: absolute;
+        margin: auto;
+        width: 80%;
+        left: 0;
+        right: 0;
+        height: 20%;
+        z-index: 10;
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        align-items: center;
+        bottom: 65%;
+        .card_image{
+            transition: .5s;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+        }
+        .card_title {
+            transition: .5s;
+            font-weight: 700;
+        }
+        .card_subTitle {
+            transition: .5s;
+            margin-top: -5px;
+            color: grey;  
+            font-weight: 700;  
+        }
+        .sns_contain{
+            color: #333;
+            font-weight: 700;
+            width: 100%;
+            margin-top: 20%;
+            display: flex;
+            justify-content: space-around;
+            p{
+                opacity: 0;
+                transform: translateY(300%);
+                transition: .3s;
+            }
+        }
+    }
+}
+
+.card10_inner:hover{
+    opacity: 1;
+    .content{
+        .card_image{
+            transform: translateY(-10%);
+        }
+        .card_title{
+            transform: translateY(-15%);
+        }
+        .card_subTitle{
+            transform: translateY(-10%);
+        }
+        .sns_contain p:nth-child(1){
+            transition: .2s;
+            transform: translateY(0%);
+            opacity: 1;
+        }
+        .sns_contain p:nth-child(2){
+            transition: .4s;
+            transform: translateY(0%);
+            opacity: 1;
+        }
+        .sns_contain p:nth-child(3){
+            transition: .6s;
+            transform: translateY(0%);
+            opacity: 1;
+        }
+    }
+}

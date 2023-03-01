@@ -29,6 +29,10 @@ https://user-images.githubusercontent.com/76980526/220794012-dbd34ec3-ee17-49d7-
 ## 파일명 : Card9
 ![ezgif com-video-to-gif](https://user-images.githubusercontent.com/76980526/221396770-147dbae7-d129-4035-8282-3f7fbeee8fc4.gif)
 
+## 파일명 : Card10
+![ezgif com-video-to-gif (1)](https://user-images.githubusercontent.com/76980526/222073411-ab580d35-5d6d-4f53-b9c8-687179a5b44f.gif)
+
+
 
 ## 파일명 : imgCarousel
 ![imgCarousel](https://user-images.githubusercontent.com/76980526/220793443-e190b376-b9e1-45fb-8b97-10e38f31e875.gif)
