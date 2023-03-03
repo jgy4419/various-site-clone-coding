@@ -1,17 +1,51 @@
-import React from 'react';
-import './Home.scss';
+// 부모 컴포넌트
+import Button from './SecondChild';
+import { useEffect, useState, useCallback, useMemo } from 'react';
+import './Home.scss'
+// import './App.css';
 
 const Home = () => {
-    return (
-        <div>
-            <p className="kuku">쿠쿠</p>
-            <q>Some quotes,</q> he said, <q>are better than none.</q>
-        </div>
-    );
+    const [ex, setEx] = useState(0);
+  const [why, setWhy] = useState(0);
+
+  function 로직이복잡한함수(){
+    // ex 변수가 변경될 때만 fetch가 동작한다.
+    fetch("https://jsonplaceholder.typicode.com/posts")
+        .then(res => res.json())
+        .then(data => {
+          console.log(data);
+          return data;
+        })
+  }
+
+  const apiGet = useCallback(() => {로직이복잡한함수()}, [why]);
+
+  console.log('parent re-render')
+
+  return (
+      <div>
+        <button onClick={() => setEx((curr) => (curr + 1))}>X</button>
+        <button onClick={() => setWhy((curr2) => (curr2 + 1))}>Y</button>
+        <Profile onSave={apiGet} ex={ex}/>
+      </div>
+  );
 };
 
-export default Home;
+function Profile({onSave, ex}) {
 
+  useEffect(() => {
+    onSave();
+  }, [onSave]);
+
+  return(
+      <div>
+            <p>profile {ex}</p>
+      </div>
+  )
+
+}
+
+export default Home;
 
 // import React, { useState } from 'react';
 
