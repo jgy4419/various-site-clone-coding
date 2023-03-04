@@ -25,7 +25,7 @@ import ScrollSideEvent from './SpecificPart/Scroll/ScrollSideEvent';
 import Login from './SpecificPart/Login/Login';
 import Test from './SpecificPart/Loading/Test';
 import Effect from './SpecificPart/Effect/Effect';
-import MultiStepProgress from './SpecificPart/MultiStepProgress/MultiStepProgress';
+import ProgressBar from './SpecificPart/Progressbar/ProgressBarIndex';
 import DragAndDrop from './SpecificPart/DragAndDrop/DragAndDrop';
 
 // Technology
@@ -110,8 +110,8 @@ function App(props) {
       <Route exact path="/effect">
         <Effect/>
       </Route>
-      <Route exact path="/multiStepProgress">
-        <MultiStepProgress/>
+      <Route exact path="/ProgressBar">
+        <ProgressBar/>
       </Route>
       <Route exact path="/draganddrop">
         <DragAndDrop/>

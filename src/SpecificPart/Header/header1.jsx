@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import {Link} from 'react-router-dom';
 import './header1.scss';
 
 const Header1 = () => {
@@ -16,6 +17,14 @@ const Header1 = () => {
         document.querySelector('.hoverItemMenus').style.opacity = 0;
     }
 
+    useEffect(() => {
+        return () => {
+            setTimeout(() => {
+                alert('!');
+            }, 2000);
+        }
+    }, []);
+
     return (
         <div className="header1Contain">
             <div className="inner">
@@ -24,7 +33,9 @@ const Header1 = () => {
                     {
                         item_li.map((item, index) => {
                             return (
-                                <li onMouseOver={over} onMouseOut={out} className="item" key={index}>{item}</li>
+                                <li onMouseOver={over} onMouseOut={out} className="item" key={index}>
+                                    {item}
+                                </li>
                             )
                         })
                     }
@@ -35,7 +46,10 @@ const Header1 = () => {
                         {
                             item_li_1.map((item, index) => {
                                 return (
-                                    <li className="item-list" key={index}>{ item }</li>
+                                    <li 
+                                    className="item-list" key={index}>
+                                        <Link to={'/board'} >{item}</Link>
+                                    </li>
                                 )
                             })
                         }
