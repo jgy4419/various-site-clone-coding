@@ -12,7 +12,7 @@ const CircularProgressBar = () => {
         progressValue.current.textContent = `${progressStartValue}%`;
         circularProgress.current.style.background = `conic-gradient(#7d2ae8 
             ${progressStartValue * 3.6}deg, #ededed 0deg)`;
-        if(progressStartValue === progressEndValue) {
+        if(progressStartValue === progressEndValue + 8) {
             clearInterval(progress);
         }
     }, speed);
