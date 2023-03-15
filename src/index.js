@@ -4,36 +4,22 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-// import {Provider} from 'react-redux';
-import {createStore} from 'redux';
+import {Provider} from 'react-redux';
+import {applyMiddleware, createStore} from 'redux';
+import rootReducer from './redux/store';
 
 import {BrowserRouter} from 'react-router-dom';
+import ReduxThunk from 'redux-thunk';
 
-// import store from './redux/store';
-
-// console.log(store);
-
-// let store = createStore(() => {
-//   return [{id: 0, name: '멋진신발', quan: 2}]
-// })
-
-// function reducer(store = store, action){
-//   let copy = [...store];
-//   if(action.type === "수량증가"){
-//     copy[0].quan++;
-//     return copy;
-//   }
-//   else{
-//     return store;
-//   }
-// }
+// thunk 사용 시 미들웨어에 적용시켜주기.
+const store = createStore(rootReducer, applyMiddleware(ReduxThunk));
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      {/* <Provider> */}
+      <Provider store={store}>
         <App />
-      {/* </Provider> */}
+      </Provider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')

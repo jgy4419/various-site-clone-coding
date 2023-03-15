@@ -1,49 +1,32 @@
-// 부모 컴포넌트
-import Button from './SecondChild';
-import { useEffect, useState, useCallback, useMemo } from 'react';
-import './Home.scss'
-// import './App.css';
+import { useSelector, useDispatch } from 'react-redux';
+// action 실행함수 가져오기
+import { addAsync, minusData } from './redux/modules/counter';
+import { getPost } from './redux/modules/post';
 
 const Home = () => {
-    const [ex, setEx] = useState(0);
-  const [why, setWhy] = useState(0);
+  const dispatch = useDispatch();
+  const state = useSelector(state => state);
 
-  function 로직이복잡한함수(){
-    // ex 변수가 변경될 때만 fetch가 동작한다.
-    fetch("https://jsonplaceholder.typicode.com/posts")
-        .then(res => res.json())
-        .then(data => {
-          console.log(data);
-          return data;
-        })
+  const getPostNext = () => {
+    dispatch(addAsync());
+    dispatch(getPost(state.counter.num));
   }
 
-  const apiGet = useCallback(() => {로직이복잡한함수()}, [why]);
-
-  console.log('parent re-render')
+  const getPostPrev = () => {
+    dispatch(minusData());
+    dispatch(getPost(state.counter.num));
+  }
 
   return (
-      <div>
-        <button onClick={() => setEx((curr) => (curr + 1))}>X</button>
-        <button onClick={() => setWhy((curr2) => (curr2 + 1))}>Y</button>
-        <Profile onSave={apiGet} ex={ex}/>
-      </div>
+    <div>
+      <p>{state.post.data.title}</p>
+      <p>{state.post.data.body}</p>
+      <p>{state.counter.num}</p>
+      <button onClick={() => dispatch(getPostNext())}>+</button>
+      <button onClick={() => dispatch(getPostPrev())}>-</button>
+    </div>
   );
 };
-
-function Profile({onSave, ex}) {
-
-  useEffect(() => {
-    onSave();
-  }, [onSave]);
-
-  return(
-      <div>
-            <p>profile {ex}</p>
-      </div>
-  )
-
-}
 
 export default Home;
 
@@ -53,7 +36,7 @@ export default Home;
 //     console.log('?');
 //     const [value, setValue] = useState('');
 
-//     const isValid = value => value.length < 10; // 유효성 검사
+//     const isValid = value => value.countgth < 10; // 유효성 검사
 
 //     const onChange = (e) => {
 //         const { value } = e.target;
