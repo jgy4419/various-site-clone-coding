@@ -27,6 +27,7 @@ import Test from './SpecificPart/Loading/Test';
 import Effect from './SpecificPart/Effect/Effect';
 import ProgressBar from './SpecificPart/Progressbar/ProgressBarIndex';
 import DragAndDrop from './SpecificPart/DragAndDrop/DragAndDrop';
+import Parallax from './SpecificPart/Parallax/Parallax';
 
 // Technology
 import Pagination from './Technology/pagenation/index.jsx';
@@ -130,6 +131,9 @@ function App(props) {
       </Route>
       <Route exact path="/yoguyoOrder">
         <YoguyoOrder/>
+      </Route>
+      <Route exact path="/Parallax">
+        <Parallax/>
       </Route>
         {/* ToDoList */}
         {/* <Route exact path="/todoList">
