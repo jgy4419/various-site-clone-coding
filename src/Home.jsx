@@ -8,7 +8,9 @@ const Home = () => {
   const state = useSelector(state => state);
 
   const getPostNext = () => {
+    // addAsync 값을 변경시킨 뒤 
     dispatch(addAsync());
+    // 변경된 counter 값을 thunk 함수의(getPost) 인자로 넣어주기
     dispatch(getPost(state.counter.num));
   }
 
@@ -22,8 +24,8 @@ const Home = () => {
       <p>{state.post.data.title}</p>
       <p>{state.post.data.body}</p>
       <p>{state.counter.num}</p>
-      <button onClick={() => dispatch(getPostNext())}>+</button>
-      <button onClick={() => dispatch(getPostPrev())}>-</button>
+      <button onClick={() => getPostNext()}>+</button>
+      <button onClick={() => getPostPrev()}>-</button>
     </div>
   );
 };
