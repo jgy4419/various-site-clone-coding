@@ -28,6 +28,7 @@ import Effect from './SpecificPart/Effect/Effect';
 import ProgressBar from './SpecificPart/Progressbar/ProgressBarIndex';
 import DragAndDrop from './SpecificPart/DragAndDrop/DragAndDrop';
 import Parallax from './SpecificPart/Parallax/Parallax';
+import InputControls from './SpecificPart/Controls/InputControls';
 
 // Technology
 import Pagination from './Technology/pagenation/index.jsx';
@@ -134,6 +135,9 @@ function App(props) {
       </Route>
       <Route exact path="/Parallax">
         <Parallax/>
+      </Route>
+      <Route exact path="/InputControls">
+        <InputControls/>
       </Route>
         {/* ToDoList */}
         {/* <Route exact path="/todoList">
