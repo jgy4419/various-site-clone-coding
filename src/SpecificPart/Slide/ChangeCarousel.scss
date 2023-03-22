@@ -1,0 +1,39 @@
+.change-carousel-contain {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    .carousel-button-contain{
+        z-index: 10;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background-color: #000000;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+        li{
+            cursor: pointer;
+            width: 10%;
+            font-weight: 700;
+            padding: 10px;
+            font-size: 16px;
+            color: #fff;
+        }
+    }
+    .content-contain{
+        position: absolute;
+        width: 90%;
+        .content{
+            width: 100vw;
+            height: 100vh;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 10%;
+            line-height: 3rem;
+        }
+    }
+}

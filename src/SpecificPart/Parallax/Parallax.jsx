@@ -8,7 +8,7 @@ const Parallax = () => {
     useParallax(setScrollPosition);
     return (
         <>
-            <section
+            <section npm install redux react-redux 해주기
                 style={{
                     backgroundSize: `${(window.outerHeight - scrollPosition) / 5}%`
                 }}

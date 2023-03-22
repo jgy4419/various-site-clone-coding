@@ -57,4 +57,11 @@ https://user-images.githubusercontent.com/76980526/220793882-078c84af-77d8-4058-
 https://user-images.githubusercontent.com/76980526/220793925-5b82408e-2aab-401b-a349-5391aea4f936.mov
 
 
-.
+## 파일명 : Parallax.jsx
+![ezgif com-video-to-gif (1)](https://user-images.githubusercontent.com/76980526/226939955-268ffea6-ae4b-4974-9b85-bdcfdf3d0471.gif)
+
+## 파일명 : InputControls.jsx
+![ezgif com-video-to-gif (2)](https://user-images.githubusercontent.com/76980526/226940415-979c64ec-9a4f-4feb-a627-dcb03899c38b.gif)
+
+## 파일명 : ChangeCarousel.jsx
+![ezgif com-video-to-gif (3](https://user-images.githubusercontent.com/76980526/226940726-ba1e1591-0a1c-4b93-90c6-f6c7747f79ef.gif)
