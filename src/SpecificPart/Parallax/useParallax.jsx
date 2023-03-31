@@ -1,6 +1,5 @@
 import {useEffect} from 'react';
 
-
 const useParallax = (setScrollPosition) => {
     const handleScroll = () => {
         setScrollPosition(window.pageYOffset);
