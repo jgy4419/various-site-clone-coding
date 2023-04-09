@@ -1,0 +1,48 @@
+.control {
+    border: 1px solid #dfe1f0;
+    outline: none;
+    width: 100%;
+    height: 56px;
+    padding: 0 16px;
+    background: #fff7ff;
+    color: inherit;
+    border-radius: 6px;
+    margin: 8px 0;
+    font-family: Poppins;
+    text-align: left;
+    font-size: 18px;
+    .bars {
+        margin: 8px 0;
+        flex: 1 1 auto;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        height: 6px;
+        border-radius: 3px;
+        background: #dfe1f0;
+        div { 
+            height: 6px;
+            border-radius: 3px;
+            transition: 0.4s;
+            width: 0%;
+        }
+    }
+    .bars.weak div {
+        background: #e24c71;
+        width: 33.33%;
+    }
+    .bars.medium div {
+        background: #f39845;
+        width: 66.66%;
+    }
+    .bars.strong div {
+        background: #57c558;
+        width: 100%;
+    }
+    .strength {
+        text-align: left;
+        height: 30px;
+        text-transform: capitalize;
+        color: #868b94;
+    }
+}
