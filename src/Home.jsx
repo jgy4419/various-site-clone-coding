@@ -1,37 +1,48 @@
-import { useSelector, useDispatch } from 'react-redux';
-// action 실행함수 가져오기
-import { addAsync, minusData } from './redux/modules/counter';
-import { getPost } from './redux/modules/post';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import Second from './Home2';
 
 const Home = () => {
-  const dispatch = useDispatch();
-  const state = useSelector(state => state);
-
-  const getPostNext = () => {
-    // addAsync 값을 변경시킨 뒤 
-    dispatch(addAsync());
-    // 변경된 counter 값을 thunk 함수의(getPost) 인자로 넣어주기
-    dispatch(getPost(state.counter.num));
+  const [str, setStr] = useState('zzzㅋㅋㅋ');
+  const item = { 
+    name: 'test',
+    age: 245
   }
-
-  const getPostPrev = () => {
-    dispatch(minusData());
-    dispatch(getPost(state.counter.num));
+  const memoItem = useMemo(() => item, []);
+  const [num, setNum] = useState(1);
+  const test = () => {
+    setNum(prev => prev + 1);
   }
-
-  return (
-    <div>
-      <p>{state.post.data.title}</p>
-      <p>{state.post.data.body}</p>
-      <p>{state.counter.num}</p>
-      <button onClick={() => getPostNext()}>+</button>
-      <button onClick={() => getPostPrev()}>-</button>
-    </div>
+  const callbackData = useCallback(test, []);
+   return (
+    <>
+      <Components test={test}>
+        <Second str={memoItem}/>
+      </Components>
+    </>
   );
 };
 
 export default Home;
 
+
+function Components ({children, test}){
+      console.log(children.props);
+  return (
+    <>
+      <button onClick={test}>ㅋㅋ</button>
+      {children}
+    </>
+  )
+}
+
+// function Second({str}) {
+//   console.log(str);
+//   return (
+//     <>
+//       <h1>??</h1>
+//     </>
+//   )
+// }
 // import React, { useState } from 'react';
 
 // const useInput = () => {

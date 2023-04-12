@@ -1,0 +1,79 @@
+.card11Contains {
+    position: relative;
+    width: 100vw;
+    height: 40vh;
+    .card11ContainsInner{
+        position: relative;
+        width: 350px;
+        height: 250px;
+        overflow: hidden;
+        .card__image {
+            position: absolute;
+            border-radius: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            scale: 1.15;
+            transition: opacity 0.25s, scale 0.35s;
+        }
+        .card11_dark_background{
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            background: rgba($color: #000000, $alpha: 0.5);
+            opacity: 0;
+            transition: 0.25s;
+        }
+        .card__body {
+            position: absolute;
+            z-index: 10;
+            inset: 0;
+            padding: 50px;
+            color: #fff;
+            text-align: center;
+            row-gap: 15px;
+            justify-content: center;
+        }
+        .card__body::before {
+            content: '';
+            position: absolute;
+            inset: 20px;
+            border: 2px solid #fff;
+            opacity: 0;
+            scale: 1.25;
+            transition: opacity 0.25s, scale 0.25s;
+        }
+    }
+    .card11ContainsInner:hover{
+        .card__image{
+            opacity: 0.5s;
+            scale: 1;
+        }
+        .card__body::before {
+            opacity: 1;
+            scale: 1;
+        }
+        .card__description{
+            margin-top: 20px;
+            opacity: 1;
+            translate: 0;
+            color: #eeeeee;
+        }
+        .card11_dark_background{
+            opacity: 1;
+        }
+    }
+    .card__title {
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5s)
+    }
+    .card__description {
+        font-size: 14px;
+        opacity: 0;
+        translate: -25px;
+        transition: .25s;
+        // transition: opactity 0.25s, translate 0.25s;
+    }
+}

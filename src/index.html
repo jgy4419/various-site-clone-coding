@@ -4,22 +4,65 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
     <title>Document</title>
 </head>
 <body>
-    <form action="">
-        이메일 : <input type="email" name="email"> <br/>
-        URL : <input type="url" name="url"> <br/>
-        전화번호 : <input type="tel" name="tel"> <br/>
-        색상 :  <input type="color" name="color"> <br/>
-        월 : <input type="month" name="month"> <br/>
-        날짜 : <input type="date" name="date"> <br/>
-        주 : <input type="month" name="week"> <br/>
-        시간 : <input type="time" name="time"> <br/>
-        지역 시간 : <input type="datetime-local" name="localdatetime"> <br/>
-        숫자 : <input type="number" name="number" min="1" max="1" step="2"> <br/>
-        범위 :<input type="range" name="range" min="1" max="10" step="2"> <br/>
-        <input type="submit" value="제출">
-    </form>
+    <header>
+        ㅁㄴㅇ
+        <h1>HTML, CSS, JAVASCRIPT를 이용한 웹 페이지의 작성</h1>
+        <p>HTML5를 사용해 웹 페이지 작성하는 방법을 학습.</p>
+    </header>
+    <nav>
+        <h2>목차</h2>
+        <ul>
+            <li>HTML5</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+    </nav>
+    <section>
+        <article>
+            <h2>HTML5</h2>
+            <p>HTML를 이용</p>
+        </article>
+        <article>
+            <h2>HTML5</h2>
+            <p>HTML를 이용</p>
+        </article>
+        <article>
+            <h2>HTML5</h2>
+            <p>HTML를 이용</p>
+        </article>
+    </section>
+    <footer>This is a Footer.</footer>
 </body>
+<style>
+    *{  
+        margin: 0;
+        padding: 0;
+    }
+    html, body {
+        height: 100%;
+        background-color: #fff;
+    }
+    header{
+        background-color: yellow;
+    }
+    nav {
+        float: left;
+        width: 30%;
+        height: 70%;
+        background: green;
+    }
+    section {
+        float: left;
+        width: 70%;
+        height: 70%;
+        background-color: olive;
+    }
+    footer{
+        background-color: rgb(125, 125, 194);
+    }
+</style>
 </html>
