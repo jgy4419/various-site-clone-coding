@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
+import SearchInputControl from './SearchInputControl';
 
 const InputControls = () => {
     const [inputValue, setInputValue] = useState('');
@@ -9,12 +10,15 @@ const InputControls = () => {
         else setWarningState(true)
     }, [inputValue]);
     return (
-        <InputContain >
-           <Input onChange={(e) => setInputValue(e.currentTarget.value)} type="text" placeholder='아이디를 입력해주세요.'/> 
-            <WarningMessage warningState={warningState}>
-                8자 이상 입력해주세요.
-            </WarningMessage>
-        </InputContain>
+        <>
+            <SearchInputControl/>
+            <InputContain>
+            <Input onChange={(e) => setInputValue(e.currentTarget.value)} type="text" placeholder='아이디를 입력해주세요.'/> 
+                <WarningMessage warningState={warningState}>
+                    8자 이상 입력해주세요.
+                </WarningMessage>
+            </InputContain>
+        </>
     );
 };
 const InputContain = styled.div`

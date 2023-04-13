@@ -26,7 +26,7 @@ const Login = () => {
                     </a>
                 </form>
             </div>
-            {/* <Input1 /> */}
+            <Input1 />
             <Login2/>
         </>
     );
