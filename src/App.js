@@ -28,6 +28,7 @@ import Effect from './SpecificPart/Effect/Effect';
 import ProgressBar from './SpecificPart/Progressbar/ProgressBarIndex';
 import DragAndDrop from './SpecificPart/DragAndDrop/DragAndDrop';
 import Parallax from './SpecificPart/Parallax/Parallax';
+import Parallax2 from './SpecificPart/Parallax2/Parallax2';
 import InputControls from './SpecificPart/Controls/InputControls';
 import Input from './SpecificPart/Input/input';
 
@@ -136,6 +137,9 @@ function App(props) {
       </Route>
       <Route exact path="/Parallax">
         <Parallax/>
+      </Route>
+      <Route exact path="/Parallax2">
+        <Parallax2/>
       </Route>
       <Route exact path="/InputControls">
         <InputControls/>

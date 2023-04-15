@@ -4,65 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./index.css">
     <title>Document</title>
 </head>
 <body>
-    <header>
-        ㅁㄴㅇ
-        <h1>HTML, CSS, JAVASCRIPT를 이용한 웹 페이지의 작성</h1>
-        <p>HTML5를 사용해 웹 페이지 작성하는 방법을 학습.</p>
-    </header>
-    <nav>
-        <h2>목차</h2>
-        <ul>
-            <li>HTML5</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-        </ul>
-    </nav>
-    <section>
-        <article>
-            <h2>HTML5</h2>
-            <p>HTML를 이용</p>
-        </article>
-        <article>
-            <h2>HTML5</h2>
-            <p>HTML를 이용</p>
-        </article>
-        <article>
-            <h2>HTML5</h2>
-            <p>HTML를 이용</p>
-        </article>
-    </section>
-    <footer>This is a Footer.</footer>
+    <input onchange="cangeColor()" class="input_color" type="color">
+    <body>
+        <h2>선호도 조사입니다.</h2>
+        <form action="">
+            성별 : 
+            <input type="radio" name="gender" value="male" checked/> 남성
+            <input type="radio" name="gender" value="female"> 여성 <br/>
+            과일 선택 : 
+            <input type="checkbox" name="fruits" value="apple" checked/> 사과
+            <input type="checkbox" name="fruits" value="grape"/> 포도
+            <input type="checkbox" name="fruits" value="orange"/> 오렌지
+        </form>
+    </body>
 </body>
-<style>
-    *{  
-        margin: 0;
-        padding: 0;
+<script>
+    let inputColor = document.querySelector('.input_color');
+    let elementColor = inputColor.value;
+    function cangeColor() {
+        if(elementColor !== inputColor.value){
+            document.querySelector('body').style.backgroundColor = `${inputColor.value}`;
+        }else {
+            document.querySelector('body').style.backgroundColor = `${inputColor.value}`;
+        }
     }
-    html, body {
-        height: 100%;
-        background-color: #fff;
-    }
-    header{
-        background-color: yellow;
-    }
-    nav {
-        float: left;
-        width: 30%;
-        height: 70%;
-        background: green;
-    }
-    section {
-        float: left;
-        width: 70%;
-        height: 70%;
-        background-color: olive;
-    }
-    footer{
-        background-color: rgb(125, 125, 194);
-    }
-</style>
+</script>
 </html>
