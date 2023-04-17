@@ -33,7 +33,9 @@ const useDebounce = (value, delay) => {
 const AutoSuggest = () => {
     const [searchTerm, setSearchTerm] = useState("");
     const [results, setResults] = useState([]);
+    // 검색창에 값이 있는지 없는지의 상태 (상태에 따른 스타일 변경)
     const [inputState, setInputState] = useState(false);
+    // custom-hook 가져와서 input에 입력된 값, debounce 될 시간 인자로 보내주기.
     const debouncedSearchTerm = useDebounce(searchTerm, 500);
     const handleSearched = e => {
         e.target.value === '' 
@@ -46,17 +48,19 @@ const AutoSuggest = () => {
     }
 
     useEffect(() => {
-        const namesCopy = [...names];
+        const namesCopy = [...names]; // database에 있는 값 가져옴.
         setResults(
+            // 검색창에 입력한 값들을 DataBase에 있는 값들 기준으로 필터링
             namesCopy.filter(
                 n => 
-                    searchTerm === "" ||
+                    // 대, 소문자를 구분하기 위해서 DB값 검색창 값 모두 소문자로 변경해서 포함된 값 반환.
                     n.toLowerCase().includes(searchTerm.toLowerCase())
             )
         )
     }, [debouncedSearchTerm, searchTerm]);
 
     return (
+        
         <SearchInputControl
             handleSearched={handleSearched}
             handleClicked={handleClicked}
