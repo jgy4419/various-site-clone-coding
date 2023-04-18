@@ -1,5 +1,5 @@
 import gsap from "gsap";
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import './Gsap.scss';
 
 const Gsap = () => {
@@ -11,23 +11,25 @@ const Gsap = () => {
         gsap.to('.gsap3_box', {duration: 3, y: 0, height: 200, delay: 9});
     }
     // gsap2
-    const tween = gsap.to('.animation_box', {
-        duration: 4,
-        x: 500,
-        rotation: 360,
-        ease: "none",
-        paused: true
-    })
+    let tween;
     useEffect(() => {
+        tween = gsap.to('.animation_box', {
+            duration: 4,
+            x: 500,
+            rotation: 360,
+            ease: "none",
+            paused: true
+        })
         // Target 요소 속성에서 지정한 속성까지 애니메이션이 된다.
         gsap.to('.green', {rotation: 360, x: 100, duration: 1});
         // to와 정반대로 시작 값을 정하고 원래대로 되돌아오는 애니메이션이 실행된다.
         gsap.from('.purple', {rotation: -50, x: -100, duration: 1})
         // from 속성이 시작 값으로 세팅되고, to 속성이 종료 값으로 세팅되어 애니메이션 효과가 적용된다.
         gsap.fromTo('.blue', {x: 500, opacity: 0}, {rotation: 360, x: 100, duration: 1, opacity: 1})
-    }, []);
+    }, [tween]);
     return (
         <div className='gsap_container'>
+            {/* <GsapSpinning/> */}
             <div className="gsap_1">
                 <h1>GSAP 기본 사용 법</h1>
                 <div className="gsap1_box green"></div>

@@ -1,0 +1,19 @@
+.gsap_spinning_contain { width: 100vw; height: 100vh; margin: 0;   }
+p{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-weight: 700;
+    font-size: 50px;
+    color: #fff;
+}
+#container { height: 100%; position: relative; overflow: hidden; }
+section { width: 100%; height: 100%; position: absolute; }
+.section01 { background-color: orange; width: 100%; height: 100%; }
+.section02 { background: yellowgreen; }
+.section03 { background: firebrick; }
+.section04 { background: cornflowerblue; }
+.section05 { background: seagreen; }
