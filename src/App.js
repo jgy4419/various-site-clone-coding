@@ -32,6 +32,7 @@ import Parallax2 from './SpecificPart/Parallax2/Parallax2';
 import InputControls from './SpecificPart/Controls/InputControls';
 import Input from './SpecificPart/Input/input';
 import Gsap from './SpecificPart/Gsap/Gsap';
+import GsapSpinning from './SpecificPart/Gsap/GsapSpinning';
 
 // Technology
 import Pagination from './Technology/pagenation/index.jsx';
@@ -150,6 +151,9 @@ function App(props) {
       </Route>
       <Route exact path="/Gsap">
         <Gsap/>
+      </Route>
+      <Route exact path="/GsapSpinning">
+        <GsapSpinning/>
       </Route>
         {/* ToDoList */}
         {/* <Route exact path="/todoList">
