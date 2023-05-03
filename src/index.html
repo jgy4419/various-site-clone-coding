@@ -1,36 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
 <body>
-    <input onchange="cangeColor()" class="input_color" type="color">
-    <body>
-        <h2>선호도 조사입니다.</h2>
-        <p>선호도2</p>
-        <form action="">
-            성별 : 
-            <input type="radio" name="gender" value="male" checked/> 남성
-            <input type="radio" name="gender" value="female"> 여성 <br/>
-            과일 선택 : 
-            <input type="checkbox" name="fruits" value="apple" checked/> 사과
-            <input type="checkbox" name="fruits" value="grape"/> 포도
-            <input type="checkbox" name="fruits" value="orange"/> 오렌지
-        </form>
-    </body>
+    <div class="contain">
+        <div class="box">box</div>
+    </div>
 </body>
-<script>
-    let inputColor = document.querySelector('.input_color');
-    let elementColor = inputColor.value;
-    function cangeColor() {
-        if(elementColor !== inputColor.value){
-            document.querySelector('body').style.backgroundColor = `${inputColor.value}`;
-        }else {
-            document.querySelector('body').style.backgroundColor = `${inputColor.value}`;
-        }
+<style>
+    .contain {
+        width: 150px;
+        height: 150px;
+        background-color: yellow;
     }
-</script>
-</html>
+    .box {
+        width: 150px;
+        height: 150px;
+        background-color: #eeeeee;
+        border: 1px solid #333;
+        transition: .3s;
+    }
+    .box:hover {
+        /* 요소의 뒤쪽에서 앞면이 보이게 할지 말지 결정 */
+        backface-visibility: visible;
+        transform-origin: 50% 42%;
+				/* 원근감을 주면서 차이를 줄 수 있음. (값이 작을 수록 원근감이 올라감)
+			    500px 말고 10px도 넣어보고 10000도 넣어보기 (10000은 거의 안쓴거나 마찬가지) */
+        transform: perspective(500px) rotateY(59deg) rotateX(0deg);
+    }
+</style>
