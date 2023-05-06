@@ -77,3 +77,6 @@ https://user-images.githubusercontent.com/76980526/220793925-5b82408e-2aab-401b-
 
 ## 파일명 Gsap
 ![ezgif com-video-to-gif (1)](https://user-images.githubusercontent.com/76980526/233778892-3486cf32-5366-466b-9445-f0a265205e3d.gif)
+
+## 파일명 Card12
+![ezgif com-video-to-gif](https://user-images.githubusercontent.com/76980526/236609128-ab0cb877-5bdc-4678-a35f-8579c031bd34.gif)
