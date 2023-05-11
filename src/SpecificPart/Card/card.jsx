@@ -11,6 +11,7 @@ import Card9 from './card9';
 import Card10 from './card10';
 import Card11 from './card11';
 import Card12 from './card12';
+import Card13 from './card13';
 
 import ResponsiveCard from './ResponsiveCard';
 import DarkModeCard from './DarkModeCard';
@@ -42,6 +43,7 @@ export default function Card() {
                     {/* <DarkModeCard/> */}
                     <Card11/>
                     <Card12/>
+                    <Card13/>
                 </div>
             </div>
         </>

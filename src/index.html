@@ -8,9 +8,12 @@
         width: 150px;
         height: 150px;
         background-color: yellow;
+        padding: 20px;
+        box-sizing: content-box;
     }
     .box {
-        width: 150px;
+        /* visibility: hidden; */
+        width: 200px;
         height: 150px;
         background-color: #eeeeee;
         border: 1px solid #333;
@@ -20,6 +23,7 @@
         /* 요소의 뒤쪽에서 앞면이 보이게 할지 말지 결정 */
         backface-visibility: visible;
         transform-origin: 50% 42%;
+        visibility: visible;
 				/* 원근감을 주면서 차이를 줄 수 있음. (값이 작을 수록 원근감이 올라감)
 			    500px 말고 10px도 넣어보고 10000도 넣어보기 (10000은 거의 안쓴거나 마찬가지) */
         transform: perspective(500px) rotateY(59deg) rotateX(0deg);

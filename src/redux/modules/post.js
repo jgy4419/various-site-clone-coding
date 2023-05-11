@@ -27,6 +27,7 @@ const GET_POST_SUCCESS = "GET_POST_SUCCESS";
 const GET_POST_FAIL = "GET_POST_FAIL";
 
 // 1-1. count 값이 들어오면
+// redux thunk를 사용하면 일반 함수에 action을 줄 수 있다.
 export const getPost = (postId) => async (dispatch) => {
     dispatch({ type: GET_POST_PEDING });
     try {
