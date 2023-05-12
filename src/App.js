@@ -33,6 +33,7 @@ import InputControls from './SpecificPart/Controls/InputControls';
 import Input from './SpecificPart/Input/input';
 import Gsap from './SpecificPart/Gsap/Gsap';
 import GsapSpinning from './SpecificPart/Gsap/GsapSpinning';
+import DraggableHTMLElement from './SpecificPart/Draggable/DraggableHTMLElement'
 
 // Technology
 import Pagination from './Technology/pagenation/index.jsx';
@@ -154,6 +155,9 @@ function App(props) {
       </Route>
       <Route exact path="/GsapSpinning">
         <GsapSpinning/>
+      </Route>
+      <Route exact path="/DraggableHTMLE">
+        <DraggableHTMLElement/>
       </Route>
         {/* ToDoList */}
         {/* <Route exact path="/todoList">
