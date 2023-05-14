@@ -9,7 +9,7 @@
         display: grid;
         place-content: center;
         text-align: center;
-        background: url('../../img/testImg.png') center no-repeat;
+        background: url('../../img/testShoseimg1.png') center no-repeat;
         background-size: cover;
         padding: 10px;
         border-radius: 20px;
@@ -41,6 +41,7 @@
         transition: opacity 0.25s;
     }
     .card__title {
+        all: unset;
         color: #6a515e;
         margin-bottom: 15px;
     }

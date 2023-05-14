@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <custom-input hint="이메일을&nbsp입력해주세요."></custom-input>
+    <custom-input hint="비밀번호를&nbsp입력해주세요."></custom-input>
+    <script>
+        setTimeout(() => {
+            let customElements = document.querySelectorAll('custom-input')
+            customElements.forEach(e => {
+                e.setAttribute('hint', 'hint 수정할래용')
+            })
+        }, 3000);
+        class 클래스 extends HTMLElement {
+            // 내가 만든 태그가 HTML에 정착될 때 실행할 코드 적는 곳.
+            connectedCallback() {
+                let 변수 = document.createElement('label');
+                let hint = this.getAttribute('hint');
+                this.appendChild(변수);
+                this.innerHTML = `
+                    <label>입력창</label>
+                    <input class="main__input" type="email" placeholder=${hint} value=${hint} />
+                    <br/>
+                `
+            }
+            // name 이라는 attribute 가 바뀌는지 감시해주세요.
+            static get observedAttributes() {
+                return ['hint']
+            }
+            // 바뀌면 여기 함수 실행해줌.
+            attributeChangedCallback() {
+                this.innerHTML = `<p>이메일인풋이에요.</p>`
+            }
+        }
+        customElements.define('custom-input', 클래스);
+    </script>
+    <style>
+        .main__input{
+            width: 200px;
+            height: 45px;
+            padding: 10px;
+            border-radius: 20px;
+            border: 0;
+            box-shadow: 5px 5px 5px #eee;
+            box-sizing: border-box;
+        }
+    </style>
+</body>
+</html>
