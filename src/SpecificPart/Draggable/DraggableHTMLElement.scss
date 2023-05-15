@@ -1,4 +1,5 @@
 .draggable__container {
+    position: relative;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -18,5 +19,9 @@
         line-height: 1.5;
         box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
         cursor: move;
+        #drag__text {
+            position: absolute;
+            z-index: 10;
+        }
     }
 }

@@ -37,7 +37,7 @@ const DraggableHTMLElement = () => {
     return (
         <>
             <div className="draggable__container">
-                <div id='draggable'>Drag me!</div>
+                <div id='draggable'><span id='drag__text' contentEditable="true">Drag me!</span></div>
             </div>
         </>
     );

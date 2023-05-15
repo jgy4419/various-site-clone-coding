@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./TextEditor.scss">
+    <script src="./TextEditor.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <div className='textEditor__container'>
+        <div className="editor__menu">
+            <button id="btn-bold">
+                <b>B</b>
+            </button>
+
+            <button id="btn-italic">
+                <i>I</i>
+            </button>
+            <button id="btn-underline">
+                <u>U</u>
+            </button>
+            <button id="btn-strike">
+                <s>S</s>
+            </button>
+            <button id="btn-ordered-list">OL</button>
+            <button id="btn-unordered-list">UL</button>
+            <button id="btn-image">IMG</button>
+        </div>
+        <div id='editor' contentEditable="true">TextEditor</div>
+    </div>
+</body>
+</html>
