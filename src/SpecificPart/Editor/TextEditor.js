@@ -7,19 +7,19 @@ const btnOrderedList = document.getElementById('btn-ordered-list');
 const btnUnorderedList = document.getElementById('btn-unordered-list');
 
 btnBold.addEventListener('click', () => {
-    setStyle('bold');
+    setStyle('b');
 })
 
 btnItalic.addEventListener('click', () => {
-    setStyle('italic');
+    setStyle('i');
 })
 
 btnUnderline.addEventListener('click', () => {
-    setStyle('underline');
+    setStyle('u');
 })
 
 btnStrike.addEventListener('click', () => {
-    setStyle('strikeThrough');
+    setStyle('s');
 })
 
 btnOrderedList.addEventListener('click', () => {
@@ -31,7 +31,13 @@ btnUnorderedList.addEventListener('click', () =>{
 })
 
 function setStyle(style) {
-    document.execCommand(style);
+    // document.execCommand(style);
+    // execCommand 안쓰고 에디터 만들기
+    let node = document.createElement(style);
+    let selected = window.getSelection().getRangeAt(0);
+    node.innerText = selected;
+    selected.deleteContents();
+    selected.insertNode(node);
     focusEditor();
 }
 
@@ -44,3 +50,4 @@ function focusEditor() {
     */ 
     editor.focus();
 }
+
