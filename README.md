@@ -83,3 +83,9 @@ https://user-images.githubusercontent.com/76980526/220793925-5b82408e-2aab-401b-
 
 ## 파일명 DraggableHTMLElement
 ![DraggableHTMLElement](https://github.com/jgy4419/various-site-clone-coding/assets/76980526/bbf26c60-6ba8-40a5-8f9b-ddc1cc10b7f1)
+
+## 파일명 Card14
+![ezgif com-video-to-gif](https://github.com/jgy4419/various-site-clone-coding/assets/76980526/b874446d-211b-4658-90e8-7999de69ff31)
+
+## 파일명 TextEditor
+![ezgif com-video-to-gif](https://github.com/jgy4419/various-site-clone-coding/assets/76980526/59f9c85c-2d24-4aba-9949-02d764128c4b)

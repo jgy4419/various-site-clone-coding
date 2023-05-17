@@ -35,6 +35,8 @@ function setStyle(style) {
     // execCommand 안쓰고 에디터 만들기
     let node = document.createElement(style);
     let selected = window.getSelection().getRangeAt(0);
+    console.log(node);
+    console.log(selected);
     node.innerText = selected;
     selected.deleteContents();
     selected.insertNode(node);
