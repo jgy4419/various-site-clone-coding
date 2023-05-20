@@ -34,6 +34,7 @@ import Input from './SpecificPart/Input/input';
 import Gsap from './SpecificPart/Gsap/Gsap';
 import GsapSpinning from './SpecificPart/Gsap/GsapSpinning';
 import DraggableHTMLElement from './SpecificPart/Draggable/DraggableHTMLElement'
+import Skeleton from './SpecificPart/Skeleton/skeleton';
 // import Editor from './SpecificPart/Editor/TextEditor';
 
 // Technology
@@ -159,6 +160,9 @@ function App(props) {
       </Route>
       <Route exact path="/DraggableHTMLE">
         <DraggableHTMLElement/>
+      </Route>
+      <Route exact path="/Skeleton">
+        <Skeleton/>
       </Route>
       {/* <Route exact path="/editor">
         <Editor/>
