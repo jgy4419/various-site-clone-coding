@@ -15,6 +15,7 @@ import Card13 from './card13';
 import Card14 from './card14';
 
 import ResponsiveCard from './ResponsiveCard';
+import HoverEffectCard from './HoverEffectCard';
 import DarkModeCard from './DarkModeCard';
 
 export default function Card() {
@@ -46,6 +47,7 @@ export default function Card() {
                     <Card12/>
                     <Card13/>
                     <Card14/>
+                    <HoverEffectCard/>
                 </div>
             </div>
         </>

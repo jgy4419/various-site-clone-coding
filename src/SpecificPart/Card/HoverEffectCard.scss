@@ -1,0 +1,140 @@
+.hover_effect_card_container{ 
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    .hover_effect_cards {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .hover_effect_card{
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 300px;
+            height: 300px;
+            background-color: #fff;
+            border-radius: 20px;
+            transition: .5s;
+            transform: rotate(-10deg) skew(10deg); 
+            opacity: .7;
+            .hover_effect_text { 
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                transform: rotate(10deg) skew(-10deg);
+                transition: .7s;
+                // opacity: 0;
+                .hover_effect_main_text {
+                    all: unset;
+                    position: absolute;
+                    left: -30px;
+                    bottom: 0;
+                    font-size: 40px;
+                    opacity: 0;
+                    animation: endHoverMainText .5s;
+                    animation-delay: 1s;
+                }
+                .hover_effect_sub_text{
+                    position: absolute;
+                    opacity: 0;
+                    left: -200px;
+                    top: 70px;
+                    font-size: 20px;
+                    color: green;
+                    transform: rotate(90deg);
+                    animation: hoverSubText .5s;
+                }
+            }
+        }
+        .hover_effect_card:hover{
+            transform: skew(15deg); 
+            .hover_effect_text {
+                // opacity: 1;
+                transition: .5s;
+                .hover_effect_main_text {
+                    display: block;
+                    animation: hoverMainText .7s;
+                    opacity: 1;
+                    // animation-delay: .5s;
+                    transform: translateX(50px);
+                    // animation-play-state: paused;
+                }
+                .hover_effect_sub_text {
+                    animation: endHoverSubText .5s;
+                    animation-delay: .3s;
+                    opacity: 1;
+
+                    // transform: rotate(0deg);
+                }
+            }
+        }
+    }
+}
+
+@keyframes hoverMainText {
+    0% {
+        opacity: 0;
+        transform: translateX(0px);
+    }
+
+    70% {
+        opacity: .7;
+        transform: translateX(120px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(50px);
+    }
+}
+
+@keyframes endHoverMainText {
+    0% {
+        transform: translateX(50px);
+        opacity: 1;
+    }
+
+    70% {
+        transform: translateX(120px);
+        opacity: .6;
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes hoverSubText {
+    0% {
+        opacity: 0;
+        transform: translateY(0px);
+    }
+
+    70% {
+        opacity: .7;
+        transform: translateY(-120px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(-50px);
+    }
+}
+
+@keyframes endHoverSubText {
+    0% {
+        opacity: 1;
+        transform: translateY(-50px);
+    }
+
+    70% {
+        opacity: .7;
+        transform: translateY(-120px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(0px);
+    }
+}
