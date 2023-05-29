@@ -1,0 +1,111 @@
+.skeleton2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    background-color: #11131e;
+    .skeleton2_card {
+        max-width: 350px;
+        width: 100%;
+        height: 100%;
+        background: #11131e;
+        padding: 30px;
+        border-radius: 10px;
+        border: 1px solid #656871;
+        box-shadow: 0px 1px 26px -10px white;
+        .skeleton2_header {
+            display: flex;
+            align-items: center;
+            .skeleton2_img {
+                animation: skeleton-gradient 1s infinite;
+                height: 75px;
+                width: 75px;
+                background: #656871;
+                border-radius: 50%;
+                position: relative;
+                overflow: hidden;
+            }
+            .skeleton2_detail {
+                margin-left: 20px;
+                span { 
+                    animation: skeleton-gradient 1s infinite;
+                    display: block;
+                    background: #656871;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    position: relative;
+                }
+                .skeleton2_name {
+                    height: 15px;
+                    width: 100px;
+                }
+                .skeleton2_about {
+                    height: 13px;
+                    width: 150px;
+                    margin-top: 10px;
+                }
+            }
+        }
+        .skeleton2_description {
+            margin: 25px 0;
+            .skeleton2_line {
+                animation: skeleton-gradient 1s infinite;
+                background-color: #656871;
+                border-radius: 10px;
+                height: 13px;
+                margin: 10px 0;
+                overflow: hidden;
+                position: relative;
+            }
+            .line1 {
+                width: calc(100% - 15%);
+            }
+            .line3 {
+                width: calc(100% - 40%);
+            }
+        }
+        .skeleton2_btns {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            .skeleton2_btn {
+                animation: skeleton-gradient 1s infinite;
+                width: 45%;
+                height: 45px;
+                background: #656871;
+                border-radius: 25px;
+                position: relative;
+                overflow: hidden;
+            }
+        }
+    }
+}
+
+
+@-webkit-keyframes skeleton-gradient {
+    0% {
+        background-color: rgba(165, 165, 165, 0.1);
+    }
+
+    50% {
+        background-color: rgba(165, 165, 165, 0.3);
+    }
+
+    100% {
+        background-color: rgba(165, 165, 165, 0.1);
+    }
+}
+
+@keyframes  skeleton-gradient{
+    0% {
+        background-color: rgba(165, 165, 165, 0.1);
+    }
+
+    50% {
+        background-color: rgba(165, 165, 165, 0.3);
+    }
+
+    100% {
+        background-color: rgba(165, 165, 165, 0.1);
+    }
+}
